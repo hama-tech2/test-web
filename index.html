@@ -1,34 +1,3 @@
-Skip to content
-hama-tech2
-Bilal-bazar
-Repository navigation
-Code
-Issues
-Pull requests
-Agents
-Actions
-Projects
-Wiki
-Security and quality
-Insights
-Settings
-Bilal-bazar
-/index.html
-Go to file
-t
-T
-hama-tech2
-hama-tech2
-Update index.html
-6f0f963
- · 
-2 hours ago
-Bilal-bazar
-/index.html
-
-Code
-
-Blame
 <!DOCTYPE html>
 <html lang="ckb" dir="rtl">
 <head>
@@ -40,381 +9,400 @@ Blame
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════
-   BILAL BAZAR — CLEAN PROFESSIONAL THEME
-═══════════════════════════════════════════ */
+/* ─── VARIABLES ─── */
 :root{
-  --bg:    #050f0a;
-  --dark:  #071410;
-  --card:  #091a14;
-  --mid:   #0d2218;
-  --lift:  #112a1e;
-  --rim:   #183d2a;
-  --rim2:  #1e4d35;
-  --muted: #3a6a52;
-  --soft:  #6aa882;
-  --text:  #d8f0e8;
-  --white: #f0faf4;
-  --gold:  #059669;
-  --gold2: #10b981;
-  --gold3: #6ee7b7;
-  --teal:  #047857;
-  --teal2: #34d399;
-  --red:   #c0392b;
-  --red2:  #e74c3c;
-  --green: #059669;
-  --r:     10px;
-  --r2:    16px;
-  --r3:    22px;
+  --bg:#060a08;--surf:#0f1713;--elev:#141f1a;
+  --brd:#1e2f26;--txt:#e6f2ec;--muted:#6b8f7e;
+  --acc:#10b981;--acc2:#059669;
+  --red:#ef4444;--red2:#b91c1c;
+  --r:12px;--rs:8px;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{
-  font-family:'Outfit','Noto Sans Arabic',sans-serif;
-  background:var(--bg);color:var(--text);
-  overflow-x:hidden;-webkit-font-smoothing:antialiased;
-}
-.rtl{direction:rtl;} .ltr{direction:ltr;}
-::-webkit-scrollbar{width:4px;height:4px;}
-::-webkit-scrollbar-track{background:var(--bg);}
-::-webkit-scrollbar-thumb{background:var(--gold2);border-radius:2px;}
-.nsb::-webkit-scrollbar{display:none;} .nsb{-ms-overflow-style:none;scrollbar-width:none;}
+/* ─── RESET ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit','Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+button,input,textarea{font-family:inherit}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.rtl{direction:rtl}.ltr{direction:ltr}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--acc2);border-radius:2px}
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes shimmer{0%{background-position:200% center;}100%{background-position:-200% center;}}
-@keyframes glow{0%,100%{opacity:.6;}50%{opacity:1;}}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
-@keyframes scaleIn{from{opacity:0;transform:scale(.94);}to{opacity:1;transform:scale(1);}}
-@keyframes slideRight{from{opacity:0;transform:translateX(100%);}to{opacity:1;transform:translateX(0);}}
-@keyframes slideLeft{from{opacity:0;transform:translateX(-100%);}to{opacity:1;transform:translateX(0);}}
-@keyframes slideUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-
-/* ── REVEAL ON SCROLL ── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
-.reveal.vis{opacity:1;transform:none;}
-
-/* ── HERO VIDEO ── */
-#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.vbg{position:absolute;inset:0;z-index:0;}
-.vbg video{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.38;}
-.vbg::after{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(5,150,105,.09) 0%, transparent 70%),
-    linear-gradient(to bottom, rgba(5,15,10,.65) 0%, rgba(5,15,10,.12) 40%, rgba(5,15,10,.88) 100%);
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes glow{0%,100%{opacity:.4}50%{opacity:.8}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes toast-in{from{opacity:0;transform:translateX(-50%) translateY(-8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+/* Sponsor: slide in from left, pause, slide out to left */
+@keyframes sp-in{
+  0%{opacity:0;transform:translateX(-60px)}
+  15%,85%{opacity:1;transform:translateX(0)}
+  100%{opacity:0;transform:translateX(-60px)}
 }
 
-/* ── HERO TITLE ── */
-.hero-title{
-  font-family:'Outfit',sans-serif;font-weight:900;
-  font-size:clamp(54px,10vw,100px);
-  letter-spacing:-2px;line-height:.95;
-  background:linear-gradient(120deg,#fff 0%,#d4f7e8 25%,var(--gold2) 52%,#fff 72%,var(--gold3) 100%);
-  background-size:250% auto;
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  animation:fadeUp .7s ease .2s both, shimmer 5s linear infinite;
-}
-.hero-sub{
-  font-family:'Noto Sans Arabic',sans-serif;font-weight:900;
-  font-size:clamp(16px,3vw,24px);
-  color:rgba(245,208,128,.82);
-  animation:fadeUp .7s ease .45s both;
-  letter-spacing:1px;
-}
-.hero-desc{
-  color:rgba(220,238,255,.68);
-  font-size:clamp(13px,2.2vw,16px);
-  line-height:1.75;font-weight:400;
-  animation:fadeUp .7s ease .68s both;
-}
+/* ─── LAYOUT HELPERS ─── */
+.c{max-width:1080px;margin:0 auto;padding:0 16px}
+.flex{display:flex}.fcc{display:flex;align-items:center;justify-content:center}
+.aic{align-items:center}.jb{justify-content:space-between}.wrap{flex-wrap:wrap}
+.col{flex-direction:column}.g2{gap:8px}.g3{gap:12px}.g4{gap:16px}
+.f1{flex:1}.rel{position:relative}.abs{position:absolute}
+.fixed{position:fixed}.inset{inset:0}.ov-h{overflow:hidden}.ov-ya{overflow-y:auto}
+.w100{width:100%}.h100{height:100%}
+.grid{display:grid}
+.g-auto{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.g-2{grid-template-columns:repeat(2,1fr)}
+.g-3{grid-template-columns:repeat(3,1fr)}
+@media(min-width:640px){.sm2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:768px){.md3{grid-template-columns:repeat(3,1fr)}}
 
-/* ── ORB GLOW ── */
-.orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(70px);}
+/* ─── TYPOGRAPHY ─── */
+.xs{font-size:11px}.sm{font-size:13px}.base{font-size:15px}.lg{font-size:18px}
+.xl{font-size:22px}.xxl{font-size:28px}
+.bold{font-weight:700}.xbold{font-weight:800}.black{font-weight:900}
+.tc{text-align:center}.muted{color:var(--muted)}.acc{color:var(--acc)}
+.up{text-transform:uppercase}.ls{letter-spacing:.15em}
 
-/* ── SPONSOR BANNER (top strip) ── */
-.sp-strip{
-  position:relative;overflow:hidden;
-  background:var(--dark);
-  border-bottom:1px solid var(--rim);
-  height:64px;display:flex;align-items:center;justify-content:center;
-}
-.sp-link{
-  position:absolute;
-  opacity:0;transform:translateX(-60px);
-  animation:spCycle ease-in-out infinite;
-  display:flex;align-items:center;justify-content:center;
-  height:100%;width:100%;
-  text-decoration:none;
-}
-.sp-link:first-child:last-child{
-  position:relative;opacity:1;transform:none;animation:none;
-}
-.sp-img{
-  max-width:220px;max-height:46px;width:auto;height:auto;
-  object-fit:contain;filter:brightness(.95);
-}
-@keyframes spCycle{
-  0%{opacity:0;transform:translateX(-60px);}
-  12%{opacity:1;transform:translateX(0);}
-  75%{opacity:1;transform:translateX(0);}
-  88%{opacity:0;transform:translateX(40px);}
-  100%{opacity:0;transform:translateX(40px);}
-}
+/* ─── SPACING ─── */
+.p2{padding:8px}.p3{padding:12px}.p4{padding:16px}.p5{padding:20px}
+.px3{padding-inline:12px}.px4{padding-inline:16px}.px5{padding-inline:20px}
+.py2{padding-block:8px}.py3{padding-block:12px}.py4{padding-block:16px}.py5{padding-block:40px}
+.mt1{margin-top:4px}.mt2{margin-top:8px}.mt3{margin-top:12px}.mt4{margin-top:16px}.mt6{margin-top:24px}
+.mb1{margin-bottom:4px}.mb2{margin-bottom:8px}.mb3{margin-bottom:12px}.mb4{margin-bottom:16px}
 
-/* ── SPONSOR SIDE BARS ── */
-.sp-side{position:fixed;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px;padding:10px;background:var(--dark);border:1px solid var(--rim);}
-.sp-left{left:0;border-radius:0 12px 12px 0;border-left:none;}
-.sp-right{right:0;border-radius:12px 0 0 12px;border-right:none;}
-.sp-side img{width:58px;height:58px;object-fit:contain;border-radius:8px;background:var(--card);padding:4px;}
-@media(max-width:1024px){.sp-side{display:none;}}
+/* ─── BUTTON ─── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:10px 18px;border-radius:var(--rs);border:none;
+  font-size:13px;font-weight:700;cursor:pointer;transition:all .15s;white-space:nowrap}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none!important}
+.btn-p{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#02140d}
+.btn-p:hover:not(:disabled){filter:brightness(1.1);transform:translateY(-1px)}
+.btn-g{background:transparent;border:1px solid var(--brd);color:var(--muted)}
+.btn-g:hover{border-color:var(--acc);color:var(--txt)}
+.btn-d{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.25)}
+.btn-d:hover{background:rgba(239,68,68,.2)}
 
-/* ── HEADER ── */
-.hdr{
-  position:sticky;top:0;z-index:60;
-  background:rgba(6,9,26,.96);
-  border-bottom:1px solid var(--rim);
-  backdrop-filter:blur(14px);
-}
+/* ─── INPUT ─── */
+.inp{width:100%;background:var(--bg);border:1.5px solid var(--brd);border-radius:var(--rs);
+  padding:11px 14px;color:var(--txt);font-size:14px;outline:none;transition:border-color .2s}
+.inp:focus{border-color:var(--acc)}
+.inp::placeholder{color:#3d5a4e}
 
-/* ── CARDS ── */
-.card{
-  background:var(--card);border:1px solid var(--rim);
-  border-radius:var(--r2);overflow:hidden;
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
-}
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 50px rgba(0,0,0,.5),0 0 28px rgba(200,150,42,.1);
-  border-color:rgba(200,150,42,.3);
-}
+/* ─── CARD ─── */
+.card{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r);
+  overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{border-color:rgba(16,185,129,.3);box-shadow:0 12px 40px rgba(0,0,0,.45)}
 
-/* ── CIRCULAR DISCOUNT BADGE ── */
-.badge-discount{
-  position:absolute;top:12px;left:12px;z-index:6;
-  width:46px;height:46px;border-radius:50%;
-  background:linear-gradient(135deg,var(--red),var(--red2));
+/* ─── BADGE ─── */
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;
+  font-size:11px;font-weight:700;background:rgba(16,185,129,.1);
+  color:var(--acc);border:1px solid rgba(16,185,129,.2)}
+
+/* ─── MODAL ─── */
+.mover{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(6px);
+  z-index:50;display:flex;align-items:flex-end;justify-content:center}
+@media(min-width:520px){.mover{align-items:center;padding:20px}}
+.mbox{background:var(--elev);border:1px solid var(--brd);width:100%;max-width:520px;
+  max-height:92vh;overflow-y:auto;border-radius:var(--r) var(--r) 0 0;
+  animation:fadeUp .22s ease}
+@media(min-width:520px){.mbox{border-radius:var(--r);animation:fadeIn .2s ease}}
+.mhdr{position:sticky;top:0;background:var(--elev);padding:16px 20px;
+  border-bottom:1px solid var(--brd);display:flex;align-items:center;
+  justify-content:space-between;z-index:2}
+.mhdr h3{font-size:15px;font-weight:800}
+.mbdy{padding:20px;display:flex;flex-direction:column;gap:16px}
+
+/* ─── DRAWER ─── */
+.dov{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(4px);z-index:60}
+.dpan{position:absolute;top:0;bottom:0;width:min(300px,85vw);background:var(--surf);
+  display:flex;flex-direction:column;overflow-y:auto}
+.rtl .dpan{right:0;border-inline-start:1px solid var(--brd);animation:fadeIn .2s ease}
+.ltr .dpan{left:0;border-inline-end:1px solid var(--brd);animation:fadeIn .2s ease}
+.di{display:flex;align-items:center;gap:12px;padding:12px 20px;font-size:14px;
+  font-weight:600;color:var(--txt);background:none;border:none;width:100%;
+  text-align:inherit;cursor:pointer;transition:background .12s;text-decoration:none}
+.di:hover{background:var(--elev)}
+.dic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;
+  justify-content:center;font-size:14px;background:rgba(16,185,129,.1);flex-shrink:0}
+
+/* ─── TOAST ─── */
+.tw{position:fixed;top:16px;left:50%;transform:translateX(-50%);
+  z-index:200;display:flex;flex-direction:column;gap:8px;pointer-events:none;
+  width:max-content;max-width:90vw}
+.toast{padding:10px 18px;border-radius:var(--rs);font-size:13px;font-weight:600;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);animation:toast-in .3s ease;
+  background:var(--elev);border:1px solid var(--brd);text-align:center}
+.t-ok{border-color:rgba(16,185,129,.3);color:var(--acc)}
+.t-err{border-color:rgba(239,68,68,.3);color:var(--red)}
+
+/* ─── SPONSOR STRIP ─── */
+.sp-strip{position:relative;height:72px;background:var(--surf);
+  border-bottom:1px solid var(--brd);overflow:hidden;flex-shrink:0}
+@media(min-width:768px){.sp-strip{height:96px}}
+.sp-slide{position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;padding:6px 12px;animation:sp-in 5s ease-in-out forwards}
+.sp-slide img{max-height:100%;max-width:100%;width:100%;object-fit:contain;
+  border-radius:4px}
+.sp-link{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+
+/* ─── HERO ─── */
+#hero{position:relative;min-height:100vh;min-height:100dvh;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.vbg{position:absolute;inset:0;z-index:0}
+.vbg video{width:100%;height:100%;object-fit:cover;object-position:center;
+  position:absolute;top:0;left:0;display:block}
+.vbg::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(6,10,8,.85) 0%,rgba(6,10,8,.3) 45%,rgba(6,10,8,.92) 100%)}
+.hcont{position:relative;z-index:2;text-align:center;
+  padding:100px 20px 80px;max-width:820px;margin:0 auto;width:100%}
+.htitle{font-family:'Outfit',sans-serif;font-weight:900;
+  font-size:clamp(44px,9vw,96px);letter-spacing:-2px;line-height:.95;
+  background:linear-gradient(120deg,#fff 0%,#a7f3d0 40%,var(--acc) 70%,#fff 100%);
+  background-size:250% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;animation:fadeUp .7s ease .1s both}
+.hsub{font-family:'Noto Sans Arabic',sans-serif;font-weight:900;
+  font-size:clamp(16px,2.8vw,22px);color:rgba(245,208,128,.85);
+  margin-top:10px;animation:fadeUp .7s ease .35s both}
+.hdesc{color:rgba(220,238,255,.6);font-size:clamp(13px,2.2vw,16px);
+  line-height:1.75;margin:16px auto 32px;max-width:520px;
+  animation:fadeUp .7s ease .55s both}
+.hcta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+  animation:fadeUp .7s ease .75s both}
+.hstats{display:flex;gap:40px;justify-content:center;margin-top:50px;
+  animation:fadeUp .7s ease .95s both;flex-wrap:wrap}
+.scroll-h{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  color:rgba(255,255,255,.25);animation:fadeIn 1s ease 2.5s both;z-index:2}
+
+/* ─── HEADER ─── */
+.hdr{position:sticky;top:0;z-index:40;background:rgba(6,10,8,.9);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--brd)}
+
+/* ─── SECTION TITLE ─── */
+.stitle{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.stitle::before{content:'';display:block;width:28px;height:3px;border-radius:2px;
+  background:linear-gradient(90deg,var(--acc),var(--acc2));flex-shrink:0}
+.stitle h2{font-weight:900;font-size:24px}
+
+/* ─── POST IMAGES ─── */
+.pimg{position:relative}
+.pimg .fi{background:var(--brd);overflow:hidden;cursor:pointer}
+.pimg .fi img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.pimg .fi:hover img{transform:scale(1.04)}
+.pi1{height:230px}
+.pi2{display:grid;grid-template-columns:1fr 1fr;gap:2px;height:200px}
+.pi3{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1fr 1fr;gap:2px;height:210px}
+.pi3 .fi:first-child{grid-row:1/3}
+.pi4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;height:210px}
+.pi5{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:2px;height:200px}
+.pmore{position:absolute;inset:0;background:rgba(6,10,8,.55);
+  display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff}
+.dbadge{position:absolute;top:10px;left:10px;z-index:6;width:44px;height:44px;
+  border-radius:50%;background:linear-gradient(135deg,var(--red),var(--red2));
   color:#fff;display:flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:12px;line-height:1;text-align:center;
-  box-shadow:0 4px 14px rgba(192,57,43,.5);
+  font-weight:900;font-size:11px;line-height:1.1;text-align:center;
+  box-shadow:0 4px 12px rgba(185,28,28,.45)}
+.ltr .dbadge{left:auto;right:10px}
+.exp-ov{position:absolute;inset:0;background:rgba(6,10,8,.6);
+  backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;z-index:6}
+.exp-ov span{background:var(--red);color:#fff;padding:7px 18px;border-radius:6px;
+  font-weight:900;font-size:13px}
+
+/* ─── COUNTDOWN ─── */
+.cd{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;
+  border-radius:8px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.18)}
+.cd-b{text-align:center;min-width:24px}
+.cd-n{font-weight:900;font-size:16px;line-height:1;color:#fff}
+.cd-l{font-size:7px;color:var(--acc);text-transform:uppercase;letter-spacing:.8px;margin-top:1px}
+.cd-s{color:rgba(16,185,129,.5);font-weight:900;font-size:13px;align-self:center;margin-bottom:2px}
+
+/* ─── LIGHTBOX ─── */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:300;
+  display:flex;align-items:center;justify-content:center;padding:16px}
+.lb img{max-width:92vw;max-height:86vh;object-fit:contain;border-radius:var(--rs)}
+.lb-x{position:absolute;top:12px;right:16px;background:none;border:none;
+  color:#fff;font-size:32px;cursor:pointer;width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center}
+.lb-n{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);
+  border:none;color:#fff;width:42px;height:42px;border-radius:50%;font-size:22px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center}
+
+/* ─── CROP ─── */
+.cw{position:relative;display:inline-block;touch-action:none;user-select:none;cursor:grab}
+.cw:active{cursor:grabbing}
+.ci{max-width:360px;max-height:360px;display:block;border-radius:var(--rs)}
+.cb{position:absolute;border:2px dashed #fff;box-shadow:0 0 0 9999px rgba(0,0,0,.55);
+  border-radius:4px;pointer-events:none}
+
+/* ─── COMMENTS ─── */
+.cmt-list{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.cmt{background:var(--bg);border:1px solid var(--brd);border-radius:var(--rs);padding:8px 10px}
+.cmt-meta{font-size:10px;color:var(--muted);margin-bottom:3px;display:flex;gap:6px;align-items:center}
+.cmt-txt{font-size:12px;line-height:1.4}
+
+/* ─── SKELETON ─── */
+.sk{background:linear-gradient(90deg,var(--brd) 25%,var(--elev) 50%,var(--brd) 75%);
+  background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:8px}
+
+/* ─── LOCATION CARD ─── */
+.lcard{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r);
+  padding:20px;display:block;transition:all .2s;text-decoration:none;color:inherit}
+.lcard:hover{border-color:rgba(16,185,129,.35);transform:translateY(-3px);
+  box-shadow:0 12px 36px rgba(0,0,0,.4)}
+
+/* ─── ABOUT FEATURES ─── */
+.af{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.ai{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r);
+  padding:18px 14px;width:140px;text-align:center;transition:all .2s}
+.ai:hover{border-color:var(--acc)}
+.aico{width:40px;height:40px;border-radius:10px;background:rgba(16,185,129,.1);
+  border:1px solid rgba(16,185,129,.2);display:flex;align-items:center;
+  justify-content:center;margin:0 auto 10px;font-size:17px;color:var(--acc)}
+
+/* ─── MOBILE NAV ─── */
+.mnav{position:fixed;bottom:0;left:0;right:0;z-index:50;
+  background:rgba(6,10,8,.97);border-top:1px solid var(--brd);
+  backdrop-filter:blur(14px);display:flex;justify-content:space-around;
+  height:56px;padding-bottom:env(safe-area-inset-bottom)}
+.mnb{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:2px;color:var(--muted);background:none;border:none;
+  cursor:pointer;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+.mnb.act{color:var(--acc)}
+
+/* ─── FABs ─── */
+.fab-wa{position:fixed;bottom:68px;right:16px;width:50px;height:50px;
+  border-radius:50%;background:#25d366;display:flex;align-items:center;
+  justify-content:center;color:#fff;font-size:22px;z-index:45;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.fab-wa:hover{transform:scale(1.1)}
+.fab-add{position:fixed;bottom:68px;left:16px;width:50px;height:50px;
+  border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));
+  border:none;display:flex;align-items:center;justify-content:center;
+  color:#02140d;font-size:22px;z-index:45;cursor:pointer;
+  box-shadow:0 4px 20px rgba(16,185,129,.45);transition:transform .2s}
+.fab-add:hover{transform:scale(1.1) rotate(90deg)}
+
+/* ─── DIVIDER ─── */
+.div{height:1px;background:linear-gradient(90deg,transparent,var(--brd),transparent);margin:0 16px}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:640px){
+  .hm{display:none!important}
+  .pi1{height:200px!important}
+  .pi2,.pi3,.pi4,.pi5{height:170px!important}
+  .hstats{gap:20px!important}
+  .ai{width:120px!important}
+  .sp-strip{height:58px!important}
 }
-.ltr .badge-discount{left:auto;right:12px;}
-
-/* ── IMAGE GRID ── */
-.fb1 .fi{height:280px;}
-.fb2{display:grid;grid-template-columns:1fr 1fr;gap:2px;height:230px;}
-.fb3{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:2px;height:250px;}
-.fb3 .fi:first-child{grid-row:1/3;}
-.fb4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;height:250px;}
-.fb5{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:2px;height:230px;}
-.fi{overflow:hidden;position:relative;background:var(--mid);cursor:pointer;}
-.fi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease;}
-.fi:hover img{transform:scale(1.05);}
-.fi-more{position:absolute;inset:0;background:rgba(6,9,26,.58);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff;}
-
-/* ── COUNTDOWN ── */
-.cdown{
-  display:inline-flex;align-items:center;gap:4px;
-  padding:7px 13px;border-radius:8px;
-  background:rgba(200,150,42,.08);border:1px solid rgba(200,150,42,.18);
+@media(min-width:641px){
+  .hd{display:none!important}
+  .mnav{display:none!important}
+  .fab-wa{bottom:24px}
+  .fab-add{bottom:24px}
 }
-.cdb{text-align:center;min-width:26px;}
-.cdn{font-weight:900;font-size:17px;line-height:1;color:#fff;}
-.cdl{font-size:7px;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-top:1px;}
-.cds{color:rgba(200,150,42,.5);font-weight:900;font-size:14px;align-self:center;margin-bottom:3px;}
-
-/* ── BUTTONS ── */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border:none;border-radius:var(--r);font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;transition:all .16s ease;text-decoration:none;}
-.btn:disabled{opacity:.42;cursor:not-allowed;transform:none!important;}
-.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#06091a;box-shadow:0 4px 16px rgba(200,150,42,.3);}
-.btn-gold:hover:not(:disabled){box-shadow:0 6px 26px rgba(200,150,42,.5);transform:translateY(-1px);}
-.btn-dark{background:var(--mid);color:var(--text);border:1px solid var(--rim);}
-.btn-dark:hover{border-color:var(--gold);color:var(--gold2);}
-.btn-ghost{background:transparent;color:var(--soft);border:1px solid var(--rim);}
-.btn-ghost:hover{color:var(--text);border-color:var(--gold2);background:var(--mid);}
-.btn-teal{background:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(13,148,136,.28);}
-.btn-teal:hover:not(:disabled){background:#0b7a70;transform:translateY(-1px);}
-
-/* ── INPUTS ── */
-.inp{width:100%;background:var(--bg);border:1.5px solid var(--rim);border-radius:var(--r);padding:11px 14px;color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s;}
-.inp:focus{border-color:var(--gold);}
-.inp::placeholder{color:var(--muted);}
-
-/* ── AUTH INPUTS (white modal) ── */
-.ainp{width:100%;background:transparent;border:none;border-bottom:1.5px solid #d1d5db;padding:10px 2px;color:#111;font-size:15px;font-family:'Outfit',sans-serif;outline:none;transition:border-color .2s;}
-.ainp:focus{border-bottom-color:#1a56db;}
-.ainp::placeholder{color:#9ca3af;font-size:14px;}
-
-/* ── DARK MODAL ── */
-.mbg{position:fixed;inset:0;background:rgba(0,0,0,.86);z-index:90;display:flex;align-items:flex-end;justify-content:center;backdrop-filter:blur(6px);}
-@media(min-width:640px){.mbg{align-items:center;padding:20px;}}
-.mbox{background:var(--card);border:1px solid var(--rim);border-radius:var(--r3) var(--r3) 0 0;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;box-shadow:0 -12px 50px rgba(0,0,0,.6);animation:slideUp .24s ease;}
-@media(min-width:640px){.mbox{border-radius:var(--r3);animation:scaleIn .22s ease;}}
-.mhdr{position:sticky;top:0;z-index:2;background:var(--card);padding:16px 20px;border-bottom:1px solid var(--rim);display:flex;align-items:center;justify-content:space-between;}
-.mhdr h3{font-weight:800;font-size:15px;color:var(--white);}
-
-/* ── WHITE AUTH MODAL ── */
-.abg{position:fixed;inset:0;background:rgba(0,0,0,.84);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
-.acard{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;animation:scaleIn .23s ease;box-shadow:0 30px 80px rgba(0,0,0,.55);}
-.atop{padding:30px 30px 0;text-align:center;}
-.atop h2{font-family:'Outfit',sans-serif;font-weight:800;font-size:26px;color:#111;margin-bottom:6px;}
-.atop p{font-size:13px;color:#9ca3af;} .atop span{color:#1a56db;cursor:pointer;font-weight:700;}
-.abody{padding:22px 30px 30px;}
-.afield{margin-bottom:16px;}
-.afield label{display:block;font-size:12px;font-weight:600;color:#6b7280;font-family:'Outfit',sans-serif;margin-bottom:6px;}
-.asubmit{width:100%;padding:13px;margin-top:18px;background:#1a56db;color:#fff;border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .16s;}
-.asubmit:hover{background:#1648c2;transform:translateY(-1px);}
-.asubmit:disabled{opacity:.55;cursor:not-allowed;transform:none;}
-.adiv{display:flex;align-items:center;gap:12px;margin:16px 0;color:#9ca3af;font-size:12px;font-family:'Outfit',sans-serif;}
-.adiv::before,.adiv::after{content:'';flex:1;height:1px;background:#e5e7eb;}
-.sbtn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:11px;border:1.5px solid #e5e7eb;border-radius:10px;background:#fff;cursor:pointer;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;color:#374151;transition:all .16s;}
-.sbtn:hover{background:#f9fafb;border-color:#d1d5db;}
-
-/* ── DRAWER ── */
-.dbg{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.76);backdrop-filter:blur(4px);}
-.dpanel{position:absolute;top:0;bottom:0;width:min(290px,85vw);background:var(--dark);border-inline-end:1px solid var(--rim);display:flex;flex-direction:column;overflow-y:auto;}
-.ltr .dpanel{left:0;animation:slideLeft .22s ease;}
-.rtl .dpanel{right:0;animation:slideRight .22s ease;}
-.di{display:flex;align-items:center;gap:13px;padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text);font-size:14px;font-weight:600;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;width:100%;text-align:inherit;text-decoration:none;font-family:inherit;transition:background .14s;}
-.di:hover{background:var(--mid);}
-.dico{width:33px;height:33px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;}
-
-/* ── MOBILE NAV ── */
-.mnav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(6,9,26,.97);border-top:1px solid var(--rim);backdrop-filter:blur(14px);display:flex;justify-content:space-around;align-items:center;height:56px;padding-bottom:env(safe-area-inset-bottom);}
-.mnb{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:inherit;font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;padding:7px 0;transition:color .15s;}
-.mnb.act{color:var(--gold2);}
-
-/* ── LIGHTBOX ── */
-.lb{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:300;display:flex;align-items:center;justify-content:center;}
-
-/* ── SKELETON ── */
-.sk{background:linear-gradient(90deg,var(--mid) 25%,var(--lift) 50%,var(--mid) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:8px;}
-
-/* ── SECTION TITLE ── */
-.stitle{display:flex;align-items:center;gap:12px;}
-.stitle::before{content:'';display:block;width:28px;height:2.5px;border-radius:1px;background:linear-gradient(90deg,var(--gold),var(--gold2));flex-shrink:0;}
-
-/* ── GOLD PILL ── */
-.gpill{display:inline-flex;align-items:center;gap:5px;padding:3px 11px;border-radius:18px;font-size:11px;font-weight:700;background:rgba(200,150,42,.1);border:1px solid rgba(200,150,42,.22);color:var(--gold2);}
-
-/* ── LOCATION CARD ── */
-.loccard{background:var(--card);border:1px solid var(--rim);border-radius:var(--r2);padding:20px;text-decoration:none;color:inherit;display:block;transition:all .2s ease;}
-.loccard:hover{border-color:rgba(200,150,42,.38);transform:translateY(-4px);box-shadow:0 16px 44px rgba(0,0,0,.44),0 0 22px rgba(200,150,42,.1);}
-
-/* ── ABOUT FEATURES ── */
-.abt-feat{display:flex;gap:14;justify-content:center;flex-wrap:wrap;margin-top:28px;}
-.abt-feat-item{background:var(--card);border:1px solid var(--rim);border-radius:var(--r2);padding:18px 14px;width:140px;text-align:center;transition:all .2s;}
-.abt-feat-item:hover{border-color:var(--gold2);}
-.abt-feat-ico{width:40px;height:40px;border-radius:10px;background:rgba(5,150,105,.1);border:1px solid rgba(5,150,105,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:17px;color:var(--gold2);}
-
-/* ── RESPONSIVE ── */
-@media(max-width:640px){.hd{display:none!important;}}
-@media(min-width:641px){.mnav{display:none!important;}}
 </style>
 </head>
 <body>
 <div id="root"></div>
-
 <script type="text/babel">
 const {useState,useEffect,useRef,useCallback,useContext,useMemo}=React;
 
-/* ════════════════════════════════════════
-   SUPABASE CONFIG
-════════════════════════════════════════ */
+/* ═══ SUPABASE ═══ */
 const SB=supabase.createClient(
   'https://dtodkjkwddpmpznckrlf.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR0b2Rramt3ZGRwbXB6bmNrcmxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NDg4NTYsImV4cCI6MjA5MjQyNDg1Nn0.tdS1c39yykF-RKFuXqBKKaKtEjzd8TPeN9xqOkHkVvo'
 );
-const ADMIN_EMAIL='bilbazarlal836583@gmail.com';
+const ADMIN='bilbazarlal836583@gmail.com';
 
-/* ════════════════════════════════════════
-   TRANSLATIONS — بیلال بازار ✅
-════════════════════════════════════════ */
+/* ═══ TRANSLATIONS ═══ */
 const T={
 ckb:{
-  n:'بیلال بازار',
-  hero1:'گەورەترین بازاڕی',hero2:'بیلال بازار',
-  sub:'لە بیلال بازار هەموو شتێک دەبینیت — داشکاندنی هەفتانە',
-  deals:'داشکاندنەکان ببینە',stores:'شوێنەکانمان بدۆزەوە',
   home:'سەرەکی',locs:'شوێنەکان',about:'دەربارە',menu:'مینیو',
   login:'چوونەژوورەوە',signup:'تۆمارکردن',logout:'دەرچوون',
-  dtitle:'داشکاندنی ئەم هەفتەیە',more:'زیاتر ببینە',
-  noDeals:'هیچ داشکاندنێک نییە لەم کاتەدا',
+  deals:'داشکاندنەکان ببینە',stores:'شوێنەکانمان بدۆزەوە',
+  sub:'هەموو ئەوەی پێویستتە — هەر هەفتەیەک داشکاندنی نوێ',
+  dtitle:'داشکاندنی ئەم هەفتەیە',more:'زیاتر ببینە',noDeals:'هیچ داشکاندنێک نییە',
   ltitle:'شوێنەکانمان',atitle:'دەربارەی بیلال بازار',
-  atext:'لە بیلال بازار هەموو ئەوەی پێویستتە دەبینیت — خواردنی تازە، برنج، گۆشت، دانەوێڵە و زیاتر، بە باشترین نرخ و باشترین خزمەتگوزاری.',
+  atext:'لە بیلال بازار هەموو ئەوەی پێویستتە دەبینیت — خواردنی تازە، برنج، گۆشت، دانەوێڵە و زیاتر، بە باشترین نرخ.',
   copy:'© ٢٠٢٥ بیلال بازار · هەولێر',
-  days:'ڕۆژ',hrs:'کاتژمێر',min:'خولەک',expired:'کۆتایی هات',
-  share:'هاوبەشی',like:'دڵنیا',loginLike:'تکایە چوونەژوورەوە بۆ دڵنیابوون',
+  days:'ڕۆژ',hrs:'کاتژمێر',min:'خولەک',
+  expired:'کۆتایی هات',finished:'داشکاندن کۆتایی هات',
+  share:'هاوبەشی',like:'دڵنیا',loginLike:'تکایە چوونەژوورەوە',
+  comments:'سەرنجەکان',addComment:'سەرنج بنووسە',noComments:'هیچ سەرنجێک نییە',
   addPost:'زیادکردنی پۆست',editPost:'دەستکاری',del:'سڕینەوە',
   mgSp:'بەڕێوەبردنی بانگهێشتکارەکان',
-  ptitle:'ناونیشان',pct:'داشکاندن %',pdays:'چەند ڕۆژ',cat:'جۆر',
-  pub:'بڵاوکردنەوە',cancel:'هەڵوەشاندنەوە',save:'هەڵگرتن',
-  uploading:'بارکردن...',iurl:'لینکی وێنە',
-  hide:'شاردنەوە',show:'پیشاندان',
-  wc:'ئیمەیڵ یان وشەی نهێنی هەڵەیە',
-  noAcc:'هەژمارت نییە؟',haveAcc:'ئایا ئەندامیتی؟',
-  lang:'زمانەکان',
+  pub:'بڵاوکردنەوە',cancel:'هەڵوەشاندنەوە',save:'هەڵگرتن',uploading:'بارکردن...',
+  pct:'داشکاندن %',pdays:'چەند ڕۆژ',
+  wc:'ئیمەیڵ یان وشەی نهێنی هەڵەیە',noAcc:'هەژمارت نییە؟',haveAcc:'ئایا ئەندامیتی؟',
+  lang:'زمانەکان',copied:'کاپی کرا!',
   cats:{all:'هەموو',rice:'برنج',meat:'گۆشت',cereal:'دانەوێڵە',other:'هی تر'},
   br:'لق',pr:'کاڵا',wk:'هەفتانە',dc:'داشکاندن',
-  openMap:'کردنەوەی نەخشە',call:'پەیوەندی',
+  openMap:'نەخشە',call:'پەیوەندی',
   feat1:'کاڵای تازە',feat2:'باشترین نرخ',feat3:'کوالێتی بەرز',
+  spLink:'لینک (ئارەزووی)',crop:'بڕینی وێنە',upload:'بارکردن',
+  noImg:'وێنەیەک زیادبکە',noTitle:'ناونیشان بنووسە',
+  lessBtn:'داخستن',
 },
 ar:{
-  n:'بيلال بازار',
-  hero1:'أكبر سوق',hero2:'بيلال بازار',
-  sub:'في بيلال بازار ستجد كل ما تحتاجه — خصومات أسبوعية',
-  deals:'عرض الخصومات',stores:'ابحث عن فروعنا',
   home:'الرئيسية',locs:'المواقع',about:'من نحن',menu:'القائمة',
   login:'تسجيل الدخول',signup:'إنشاء حساب',logout:'تسجيل الخروج',
-  dtitle:'عروض الأسبوع',more:'عرض المزيد',
-  noDeals:'لا توجد عروض حالياً',
+  deals:'عرض الخصومات',stores:'ابحث عن فروعنا',
+  sub:'كل ما تحتاجه — خصومات جديدة كل أسبوع',
+  dtitle:'عروض الأسبوع',more:'عرض المزيد',noDeals:'لا توجد عروض',
   ltitle:'فروعنا',atitle:'عن بيلال بازار',
-  atext:'في بيلال بازار ستجد كل ما تحتاجه — منتجات طازجة، أرز، لحوم، حبوب وأكثر، بأفضل الأسعار وأرقى خدمة.',
+  atext:'في بيلال بازار ستجد كل ما تحتاجه — منتجات طازجة، أرز، لحوم، حبوب وأكثر، بأفضل الأسعار.',
   copy:'© ٢٠٢٥ بيلال بازار · أربيل',
-  days:'أيام',hrs:'ساعة',min:'دقيقة',expired:'انتهى',
-  share:'مشاركة',like:'إعجاب',loginLike:'يرجى تسجيل الدخول للإعجاب',
+  days:'أيام',hrs:'ساعة',min:'دقيقة',
+  expired:'انتهى',finished:'انتهى الخصم',
+  share:'مشاركة',like:'إعجاب',loginLike:'يرجى تسجيل الدخول',
+  comments:'التعليقات',addComment:'أضف تعليقاً',noComments:'لا توجد تعليقات',
   addPost:'إضافة منشور',editPost:'تعديل',del:'حذف',
-  mgSp:'إدارة الرعاة',ptitle:'العنوان',pct:'نسبة الخصم',pdays:'أيام',cat:'القسم',
-  pub:'نشر',cancel:'إلغاء',save:'حفظ',uploading:'جاري...',iurl:'رابط الصورة',
-  hide:'إخفاء',show:'إظهار',wc:'بيانات خاطئة',
-  noAcc:'ليس لديك حساب؟',haveAcc:'هل أنت عضو؟',lang:'اللغات',
+  mgSp:'إدارة الرعاة',
+  pub:'نشر',cancel:'إلغاء',save:'حفظ',uploading:'جاري...',
+  pct:'نسبة الخصم',pdays:'أيام',
+  wc:'بيانات خاطئة',noAcc:'ليس لديك حساب؟',haveAcc:'هل أنت عضو؟',
+  lang:'اللغات',copied:'تم النسخ!',
   cats:{all:'الكل',rice:'أرز',meat:'لحوم',cereal:'حبوب',other:'أخرى'},
   br:'فروع',pr:'منتج',wk:'أسبوعي',dc:'خصومات',
-  openMap:'فتح الخريطة',call:'اتصال',
+  openMap:'الخريطة',call:'اتصال',
   feat1:'منتجات طازجة',feat2:'أفضل الأسعار',feat3:'جودة عالية',
+  spLink:'رابط (اختياري)',crop:'قص الصورة',upload:'رفع',
+  noImg:'أضف صورة',noTitle:'أضف عنواناً',
+  lessBtn:'إخفاء',
 },
 en:{
-  n:'Bilal Bazar',
-  hero1:'The Biggest Market',hero2:'Bilal Bazar',
-  sub:'At Bilal Bazar you will find everything you need — weekly discounts',
-  deals:'See Deals',stores:'Find a Store',
   home:'Home',locs:'Locations',about:'About',menu:'Menu',
   login:'Login',signup:'Sign Up',logout:'Logout',
-  dtitle:"This Week's Deals",more:'See More',
-  noDeals:'No deals available right now',
+  deals:'See Deals',stores:'Find a Store',
+  sub:'Everything you need — new discounts every week',
+  dtitle:"This Week's Deals",more:'See More',noDeals:'No deals available',
   ltitle:'Our Locations',atitle:'About Bilal Bazar',
-  atext:'At Bilal Bazar you will find everything you need — fresh produce, rice, meat, cereals and more — at the best prices with the finest service.',
+  atext:'At Bilal Bazar you will find everything you need — fresh produce, rice, meat, cereals and more — at the best prices.',
   copy:'© 2025 Bilal Bazar · Erbil',
-  days:'DAYS',hrs:'HRS',min:'MIN',expired:'EXPIRED',
-  share:'Share',like:'Like',loginLike:'Please log in to like',
+  days:'DAYS',hrs:'HRS',min:'MIN',
+  expired:'EXPIRED',finished:'Discount Finished',
+  share:'Share',like:'Like',loginLike:'Please log in',
+  comments:'Comments',addComment:'Write a comment',noComments:'No comments yet',
   addPost:'Add Post',editPost:'Edit',del:'Delete',
-  mgSp:'Manage Sponsors',ptitle:'Title',pct:'Discount %',pdays:'Days',cat:'Category',
-  pub:'Publish',cancel:'Cancel',save:'Save',uploading:'Uploading...',iurl:'Image URL',
-  hide:'Hide',show:'Show',wc:'Wrong email or password',
-  noAcc:"Don't have an account?",haveAcc:'Already a member?',lang:'Languages',
+  mgSp:'Manage Sponsors',
+  pub:'Publish',cancel:'Cancel',save:'Save',uploading:'Uploading...',
+  pct:'Discount %',pdays:'Days',
+  wc:'Wrong email or password',noAcc:"Don't have an account?",haveAcc:'Already a member?',
+  lang:'Languages',copied:'Copied!',
   cats:{all:'All',rice:'Rice',meat:'Meat',cereal:'Cereals',other:'Other'},
   br:'Branches',pr:'Products',wk:'Weekly',dc:'Discounts',
-  openMap:'Open Map',call:'Call',
+  openMap:'Map',call:'Call',
   feat1:'Fresh Products',feat2:'Best Prices',feat3:'Top Quality',
-},
+  spLink:'Link (optional)',crop:'Crop Image',upload:'Upload',
+  noImg:'Add an image',noTitle:'Add a title',
+  lessBtn:'Show Less',
+}
 };
-
 const CATS=['all','rice','meat','cereal','other'];
-
 const LOCS=[
   {id:1,ckb:'بیلال بازار – شەقامی کۆیە',ar:'بيلال بازار – شارع كويا',en:'Bilal Bazar – Koya Street',
    addr:{ckb:'شەقامی کۆیە، هەولێر',ar:'شارع كويا، أربيل',en:'Koya Street, Erbil'},
@@ -427,142 +415,292 @@ const LOCS=[
    link:'https://maps.app.goo.gl/vZhSVM94MKC1Cuja9',ph:'0750 919 3030',hr:'8:00 AM – 10:00 PM'},
   {id:4,ckb:'بیلال بازار – ٤٠ مەتر',ar:'بيلال بازار – شارع ٤٠ متر',en:'Bilal Bazar – 40 Meter Street',
    addr:{ckb:'شەقامی ٤٠ مەتر، هەولێر',ar:'شارع ٤٠ متر، أربيل',en:'40 Meter Street, Erbil'},
-   link:'https://maps.app.goo.gl/HK4donz6w9YcT7WL7',ph:'0750 919 3031',hr:'8:00 AM – 10:00 PM'},
+   link:'https://maps.app.goo.gl/HK4donz6w9YcT7WL7',ph:'0750 919 3031',hr:'8:00 AM – 10:00 PM'}
 ];
 
-/* ════════════════════════════════════════
-   APP CONTEXT
-════════════════════════════════════════ */
+/* ═══ CONTEXT ═══ */
 const Ctx=React.createContext();
-const Provider=({children})=>{
-  const [lang,setLang]=useState('ckb');
-  const [user,setUser]=useState(null);
-  const [ready,setReady]=useState(false);
+function AppProv({children}){
+  const[lang,setLang]=useState('ckb');
+  const[user,setUser]=useState(null);
+  const[isAdmin,setIsAdmin]=useState(false);
+  const[ready,setReady]=useState(false);
+  const[toasts,setToasts]=useState([]);
 
   const t=useCallback(k=>{
-    const keys=k.split('.');
-    let v=T[lang];
-    for(const x of keys){
-      if(v===null||v===undefined)return k;
-      v=v[x];
-    }
-    return(v===null||v===undefined)?k:String(v);
+    const ks=k.split('.');let v=T[lang];
+    for(const x of ks){if(v==null)return k;v=v[x];}
+    return v==null?k:String(v);
   },[lang]);
+
+  const addToast=useCallback((msg,type='ok')=>{
+    const id=Date.now()+Math.random();
+    setToasts(p=>[...p,{id,msg,type}]);
+    setTimeout(()=>setToasts(p=>p.filter(x=>x.id!==id)),3200);
+  },[]);
 
   const sw=useCallback(l=>{
     setLang(l);
     document.documentElement.lang=l;
     document.documentElement.dir=l==='en'?'ltr':'rtl';
-    window.scrollTo(0,0);
   },[]);
 
-  const isAdmin=user?.email===ADMIN_EMAIL;
-  const dir=lang==='en'?'ltr':'rtl';
+  const checkAdmin=useCallback(async(uid,email)=>{
+    if(email===ADMIN){setIsAdmin(true);return;}
+    const{data}=await SB.from('profiles').select('is_admin').eq('id',uid).maybeSingle();
+    setIsAdmin(!!(data?.is_admin));
+  },[]);
 
   useEffect(()=>{
+    // Handle OAuth error in URL hash
+    const h=window.location.hash;
+    if(h&&(h.includes('error='))){
+      const p=new URLSearchParams(h.replace('#',''));
+      const err=(p.get('error_description')||p.get('error')||'Login failed')
+        .replace(/\+/g,' ');
+      addToast(decodeURIComponent(err),'err');
+      window.history.replaceState(null,'',window.location.pathname);
+    }
     SB.auth.getSession().then(({data:{session}})=>{
-      setUser(session?.user||null);
+      const u=session?.user||null;
+      setUser(u);
+      if(u)checkAdmin(u.id,u.email);
       setReady(true);
     });
-    const {data:{subscription}}=SB.auth.onAuthStateChange((_,s)=>{
-      setUser(s?.user||null);
+    const{data:{subscription}}=SB.auth.onAuthStateChange((_,s)=>{
+      const u=s?.user||null;
+      setUser(u);
+      if(u)checkAdmin(u.id,u.email);
+      else setIsAdmin(false);
     });
     return()=>subscription.unsubscribe();
-  },[]);
+  },[checkAdmin,addToast]);
 
+  const dir=lang==='en'?'ltr':'rtl';
   return(
-    <Ctx.Provider value={{lang,t,sw,dir,user,isAdmin,ready}}>
+    <Ctx.Provider value={{lang,t,sw,dir,user,isAdmin,ready,addToast}}>
       {children}
+      <div className="tw">
+        {toasts.map(x=><div key={x.id} className={`toast t-${x.type}`}>{x.msg}</div>)}
+      </div>
     </Ctx.Provider>
   );
-};
+}
 const useApp=()=>useContext(Ctx);
 
-/* ════ HELPERS ════ */
-const tLeft=(iso,days)=>{
+/* ═══ HELPERS ═══ */
+function tLeft(iso,days){
   const diff=new Date(iso).getTime()+days*86400000-Date.now();
   if(diff<=0)return null;
   return{d:Math.floor(diff/86400000),h:Math.floor(diff%86400000/3600000),m:Math.floor(diff%3600000/60000)};
-};
-const parseImgs=v=>Array.isArray(v)?v:(typeof v==='string'?JSON.parse(v||'[]'):[]);
+}
+function parseImgs(v){try{return Array.isArray(v)?v:JSON.parse(v||'[]')}catch{return[]}}
 
-/* ════ SCROLL REVEAL ════ */
-const useReveal=()=>{
-  const ref=useRef(null);
-  useEffect(()=>{
-    const el=ref.current;
-    if(!el)return;
-    const obs=new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('vis');obs.disconnect();}},{threshold:.08});
-    obs.observe(el);
-    return()=>obs.disconnect();
-  },[]);
-  return ref;
-};
+async function storeUpload(bucket,blob,ext='jpg'){
+  const nm=`${Date.now()}_${Math.random().toString(36).slice(2,7)}.${ext}`;
+  const{error}=await SB.storage.from(bucket).upload(nm,blob,{contentType:'image/jpeg'});
+  if(error)throw error;
+  return SB.storage.from(bucket).getPublicUrl(nm).data.publicUrl;
+}
 
-/* ════════════════════════════════════════
-   COUNTDOWN
-════════════════════════════════════════ */
-const Countdown=({iso,days})=>{
-  const {t}=useApp();
-  const [tl,setTl]=useState(()=>tLeft(iso,days));
-  useEffect(()=>{
-    const id=setInterval(()=>setTl(tLeft(iso,days)),30000);
-    return()=>clearInterval(id);
-  },[iso,days]);
-  if(!tl)return <div className="cdown"><span style={{color:'var(--muted)',fontSize:12,fontWeight:700}}>{t('expired')}</span></div>;
-  return(
-    <div className="cdown">
-      {[{v:tl.d,l:t('days')},{v:tl.h,l:t('hrs')},{v:tl.m,l:t('min')}].map((x,i)=>(
-        <React.Fragment key={i}>
-          {i>0&&<span className="cds">:</span>}
-          <div className="cdb">
-            <div className="cdn">{String(x.v).padStart(2,'0')}</div>
-            <div className="cdl">{x.l}</div>
-          </div>
-        </React.Fragment>
-      ))}
-    </div>
-  );
-};
+/* ═══ AUTH MODAL ═══ */
+function AuthModal({onClose}){
+  const{t,addToast}=useApp();
+  const[mode,setMode]=useState('login');
+  const[email,setEmail]=useState('');
+  const[pass,setPass]=useState('');
+  const[busy,setBusy]=useState(false);
 
-/* ════════════════════════════════════════
-   IMAGE GRID
-════════════════════════════════════════ */
-const ImgGrid=({images,pct,expired,onImg})=>{
-  const {dir}=useApp();
-  const n=images.length;
-  if(!n)return <div style={{height:220,background:'var(--mid)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:36}}>🏷️</div>;
-  const vis=Math.min(n,5);
-  const extra=n>5?n-5:0;
-  const cls=n===1?'fb1':n===2?'fb2':n===3?'fb3':n===4?'fb4':'fb5';
-  return(
-    <div style={{position:'relative'}}>
-      {n===1
-        ?<div className="fi fb1" onClick={()=>onImg(0)}><img src={images[0]} alt="" loading="lazy"/></div>
-        :<div className={cls}>
-          {images.slice(0,vis).map((img,i)=>(
-            <div key={i} className="fi" onClick={()=>onImg(i)}>
-              <img src={img} alt="" loading="lazy"/>
-              {extra>0&&i===vis-1&&<div className="fi-more">+{extra+1}</div>}
-            </div>
-          ))}
-        </div>
+  const submit=async e=>{
+    e.preventDefault();
+    setBusy(true);
+    try{
+      if(mode==='login'){
+        const{error}=await SB.auth.signInWithPassword({email:email.trim(),password:pass});
+        if(error)throw error;
+        addToast('Welcome back! 👋','ok');
+        onClose();
+      }else{
+        const{data,error}=await SB.auth.signUp({email:email.trim(),password:pass});
+        if(error)throw error;
+        if(data?.user&&!data?.session){
+          addToast('Check your email to confirm ✉️','ok');
+        }else{
+          addToast('Account created! 🎉','ok');
+          onClose();
+        }
       }
-      {pct>=0&&<div className={`badge-discount${dir==='ltr'?' ltr':''}`}>{pct}%</div>}
-      {expired&&(
-        <div style={{position:'absolute',inset:0,background:'rgba(6,9,26,.65)',display:'flex',alignItems:'center',justifyContent:'center',backdropFilter:'blur(4px)',zIndex:6}}>
-          <span style={{background:'var(--red)',color:'#fff',padding:'8px 22px',borderRadius:6,fontWeight:900,fontSize:15,letterSpacing:1}}>EXPIRED</span>
+    }catch(e){
+      let m=e.message||'';
+      if(m.includes('Invalid login')||m.includes('invalid'))m=t('wc');
+      if(m.includes('already registered')||m.includes('already'))m='Email already in use. Try Log In.';
+      if(m.includes('weak')||m.includes('characters'))m='Password must be at least 6 characters.';
+      addToast(m,'err');
+    }
+    setBusy(false);
+  };
+
+  const google=async()=>{
+    setBusy(true);
+    const{error}=await SB.auth.signInWithOAuth({
+      provider:'google',
+      options:{redirectTo:window.location.href.split('#')[0].split('?')[0]}
+    });
+    if(error){addToast(error.message||'Google login failed. Enable it in Supabase.','err');setBusy(false);}
+  };
+
+  const inpS={width:'100%',background:'transparent',border:'none',
+    borderBottom:'1.5px solid #d1d5db',padding:'10px 2px',color:'#111',
+    fontSize:15,fontFamily:'Outfit,sans-serif',outline:'none'};
+
+  return(
+    <div className="mover" onClick={onClose}>
+      <div className="mbox" style={{maxWidth:380,background:'#fff'}} onClick={e=>e.stopPropagation()}>
+        <div style={{padding:'28px 28px 0',textAlign:'center'}}>
+          <h2 style={{color:'#111',fontSize:24,fontWeight:800,marginBottom:6}}>
+            {mode==='login'?'Log In':'Sign Up'}
+          </h2>
+          <p style={{fontSize:13,color:'#9ca3af'}}>
+            {mode==='login'?t('noAcc'):t('haveAcc')}{' '}
+            <span style={{color:'#1a56db',cursor:'pointer',fontWeight:700}}
+              onClick={()=>setMode(m=>m==='login'?'signup':'login')}>
+              {mode==='login'?'Sign Up':'Log In'}
+            </span>
+          </p>
         </div>
-      )}
+        <div style={{padding:28}}>
+          <form onSubmit={submit} autoComplete="off">
+            <input type="text" style={{display:'none'}} autoComplete="username"/>
+            <div style={{marginBottom:18}}>
+              <label style={{display:'block',fontSize:12,fontWeight:600,color:'#6b7280',marginBottom:6}}>Email</label>
+              <input style={inpS} type="email" placeholder="your@email.com"
+                value={email} onChange={e=>setEmail(e.target.value)}
+                autoComplete="off" required
+                onFocus={e=>e.target.style.borderBottomColor='#1a56db'}
+                onBlur={e=>e.target.style.borderBottomColor='#d1d5db'}/>
+            </div>
+            <div style={{marginBottom:4}}>
+              <label style={{display:'block',fontSize:12,fontWeight:600,color:'#6b7280',marginBottom:6}}>Password</label>
+              <input style={inpS} type="password" placeholder="••••••••"
+                value={pass} onChange={e=>setPass(e.target.value)}
+                autoComplete="new-password" required
+                onFocus={e=>e.target.style.borderBottomColor='#1a56db'}
+                onBlur={e=>e.target.style.borderBottomColor='#d1d5db'}/>
+            </div>
+            <button type="submit" disabled={busy}
+              style={{width:'100%',padding:13,marginTop:20,background:'#1a56db',color:'#fff',
+                border:'none',borderRadius:10,fontSize:15,fontWeight:700,cursor:'pointer',
+                display:'flex',alignItems:'center',justifyContent:'center',gap:8,
+                fontFamily:'Outfit,sans-serif',transition:'all .15s',opacity:busy?.65:1}}>
+              {busy?<i className="fas fa-spinner fa-spin"/>:(mode==='login'?'Log In':'Create Account')}
+            </button>
+          </form>
+          <div style={{display:'flex',alignItems:'center',gap:12,margin:'18px 0',
+            color:'#9ca3af',fontSize:12,fontFamily:'Outfit,sans-serif'}}>
+            <div style={{flex:1,height:1,background:'#e5e7eb'}}/>or<div style={{flex:1,height:1,background:'#e5e7eb'}}/>
+          </div>
+          <button disabled={busy} onClick={google}
+            style={{width:'100%',display:'flex',alignItems:'center',justifyContent:'center',
+              gap:10,padding:11,border:'1.5px solid #e5e7eb',borderRadius:10,background:'#fff',
+              cursor:'pointer',fontSize:14,fontWeight:600,color:'#374151',
+              fontFamily:'Outfit,sans-serif',transition:'all .15s'}}
+            onMouseOver={e=>e.currentTarget.style.background='#f9fafb'}
+            onMouseOut={e=>e.currentTarget.style.background='#fff'}>
+            <svg width="18" height="18" viewBox="0 0 48 48">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+            Continue with Google
+          </button>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
-/* ════════════════════════════════════════
-   LIGHTBOX
-════════════════════════════════════════ */
-const Lightbox=({images,start,onClose})=>{
-  const [i,setI]=useState(start);
+/* ═══ CROP MODAL ═══ */
+function CropModal({file,aspect,onDone,onClose}){
+  const{t}=useApp();
+  const[img,setImg]=useState(null);
+  const[crop,setCrop]=useState({x:0,y:0});
+  const[drag,setDrag]=useState(false);
+  const dr=useRef({sx:0,sy:0,cx:0,cy:0});
+  const sz=useRef({rw:0,rh:0,cw:0,ch:0,scale:1});
+
+  useEffect(()=>{
+    const url=URL.createObjectURL(file);
+    const im=new Image();
+    im.onload=()=>{
+      const nw=im.naturalWidth,nh=im.naturalHeight;
+      const max=360,scale=Math.min(max/nw,max/nh,1);
+      const rw=nw*scale,rh=nh*scale;
+      let cw,ch;
+      if(aspect>=rw/rh){cw=rw;ch=rw/aspect}else{ch=rh;cw=rh*aspect}
+      sz.current={rw,rh,cw,ch,scale};
+      setImg(im);
+      setCrop({x:(rw-cw)/2,y:(rh-ch)/2});
+    };
+    im.src=url;
+    return()=>URL.revokeObjectURL(url);
+  },[file,aspect]);
+
+  const getXY=e=>{const t=e.touches;return t?{x:t[0].clientX,y:t[0].clientY}:{x:e.clientX,y:e.clientY}};
+  const onS=e=>{setDrag(true);const{x,y}=getXY(e);dr.current={sx:x,sy:y,cx:crop.x,cy:crop.y}};
+  const onM=e=>{
+    if(!drag)return;
+    const{x,y}=getXY(e);
+    const{rw,rh,cw,ch}=sz.current;
+    setCrop({
+      x:Math.max(0,Math.min(rw-cw,dr.current.cx+(x-dr.current.sx))),
+      y:Math.max(0,Math.min(rh-ch,dr.current.cy+(y-dr.current.sy)))
+    });
+  };
+  const onE=()=>setDrag(false);
+  const confirm=()=>{
+    if(!img)return;
+    const{scale,cw,ch}=sz.current;
+    const ox=crop.x/scale,oy=crop.y/scale,ow=cw/scale,oh=ch/scale;
+    const outW=Math.min(aspect>2?1400:1000,ow);
+    const outH=outW/aspect;
+    const c=document.createElement('canvas');
+    c.width=outW;c.height=outH;
+    c.getContext('2d').drawImage(img,ox,oy,ow,oh,0,0,outW,outH);
+    c.toBlob(b=>{if(b)onDone(b)},'image/jpeg',0.92);
+  };
+
+  if(!img)return(
+    <div className="mover">
+      <div className="mbox" style={{padding:40,textAlign:'center'}}>
+        <i className="fas fa-spinner fa-spin acc" style={{fontSize:28}}/>
+      </div>
+    </div>
+  );
+  const{rw,rh,cw,ch}=sz.current;
+  return(
+    <div className="mover" onClick={onClose}>
+      <div className="mbox" style={{maxWidth:440,textAlign:'center'}} onClick={e=>e.stopPropagation()}>
+        <div className="mhdr"><h3>{t('crop')}</h3><button className="btn btn-g" style={{padding:'6px 10px'}} onClick={onClose}>×</button></div>
+        <div className="mbdy" style={{alignItems:'center'}}>
+          <p className="xs muted">Drag to reposition. Area outside dashed border is removed.</p>
+          <div className="cw" onMouseDown={onS} onMouseMove={onM} onMouseUp={onE} onMouseLeave={onE} onTouchStart={onS} onTouchMove={onM} onTouchEnd={onE}>
+            <img src={img.src} alt="" className="ci" style={{width:rw,height:rh}} draggable={false}/>
+            <div className="cb" style={{left:crop.x,top:crop.y,width:cw,height:ch}}/>
+          </div>
+          <div className="flex g3 justify-center">
+            <button className="btn btn-g" onClick={onClose}>{t('cancel')}</button>
+            <button className="btn btn-p" onClick={confirm}><i className="fas fa-check"/> {t('upload')}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══ LIGHTBOX ═══ */
+function Lightbox({images,start,onClose}){
+  const[i,setI]=useState(start);
   useEffect(()=>{
     const h=e=>{
       if(e.key==='Escape')onClose();
@@ -574,29 +712,126 @@ const Lightbox=({images,start,onClose})=>{
   },[images,onClose]);
   return(
     <div className="lb" onClick={onClose}>
-      <button onClick={onClose} style={{position:'absolute',top:16,right:20,background:'none',border:'none',color:'#fff',fontSize:34,cursor:'pointer',zIndex:5,lineHeight:1}}>×</button>
+      <button className="lb-x" onClick={onClose}>×</button>
       {images.length>1&&<div style={{position:'absolute',top:18,left:'50%',transform:'translateX(-50%)',color:'rgba(255,255,255,.5)',fontSize:13}}>{i+1}/{images.length}</div>}
-      <img src={images[i]} alt="" style={{maxWidth:'92vw',maxHeight:'88vh',objectFit:'contain',borderRadius:10}} onClick={e=>e.stopPropagation()}/>
+      <img src={images[i]} alt="" onClick={e=>e.stopPropagation()}/>
       {images.length>1&&<>
-        <button onClick={e=>{e.stopPropagation();setI(x=>(x-1+images.length)%images.length);}} style={{position:'absolute',left:12,top:'50%',transform:'translateY(-50%)',background:'rgba(255,255,255,.09)',border:'none',color:'#fff',width:46,height:46,borderRadius:'50%',fontSize:24,cursor:'pointer'}}>‹</button>
-        <button onClick={e=>{e.stopPropagation();setI(x=>(x+1)%images.length);}} style={{position:'absolute',right:12,top:'50%',transform:'translateY(-50%)',background:'rgba(255,255,255,.09)',border:'none',color:'#fff',width:46,height:46,borderRadius:'50%',fontSize:24,cursor:'pointer'}}>›</button>
+        <button className="lb-n" style={{left:12}} onClick={e=>{e.stopPropagation();setI(x=>(x-1+images.length)%images.length)}}>‹</button>
+        <button className="lb-n" style={{right:12}} onClick={e=>{e.stopPropagation();setI(x=>(x+1)%images.length)}}>›</button>
       </>}
     </div>
   );
-};
+}
 
-/* ════════════════════════════════════════
-   DEAL CARD
-════════════════════════════════════════ */
-const DealCard=({post,onDelete,onEdit,onNeedLogin})=>{
-  const {t,user,isAdmin,lang}=useApp();
-  const [liked,setLiked]=useState(false);
-  const [likeCount,setLikeCount]=useState(post.like_count||0);
-  const [lbIdx,setLbIdx]=useState(null);
-  const ref=useReveal();
-  const images=parseImgs(post.images);
+/* ═══ SPONSOR STRIP ═══ */
+function SponsorStrip({sponsors}){
+  const[idx,setIdx]=useState(0);
+  const[tick,setTick]=useState(0);
+  useEffect(()=>{
+    if(sponsors.length<=1)return;
+    const id=setInterval(()=>{setIdx(i=>(i+1)%sponsors.length);setTick(t=>t+1);},5200);
+    return()=>clearInterval(id);
+  },[sponsors.length]);
+  if(!sponsors.length)return null;
+  const s=sponsors[idx];
+  return(
+    <div className="sp-strip">
+      <div key={`${s.id}-${tick}`} className="sp-slide">
+        {s.link_url
+          ?<a href={s.link_url} target="_blank" rel="noreferrer" className="sp-link"><img src={s.image_url} alt="sponsor"/></a>
+          :<img src={s.image_url} alt="sponsor"/>}
+      </div>
+    </div>
+  );
+}
+
+/* ═══ COUNTDOWN ═══ */
+function Countdown({iso,days}){
+  const{t}=useApp();
+  const[tl,setTl]=useState(()=>tLeft(iso,days));
+  useEffect(()=>{const id=setInterval(()=>setTl(tLeft(iso,days)),30000);return()=>clearInterval(id);},[iso,days]);
+  if(!tl)return<span className="xs bold muted">{t('finished')}</span>;
+  return(
+    <div className="cd">
+      {[{v:tl.d,l:t('days')},{v:tl.h,l:t('hrs')},{v:tl.m,l:t('min')}].map((x,i)=>(
+        <React.Fragment key={i}>
+          {i>0&&<span className="cd-s">:</span>}
+          <div className="cd-b">
+            <div className="cd-n">{String(x.v).padStart(2,'0')}</div>
+            <div className="cd-l">{x.l}</div>
+          </div>
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}
+
+/* ═══ COMMENTS ═══ */
+function Comments({postId,user}){
+  const{t,addToast}=useApp();
+  const[list,setList]=useState([]);
+  const[text,setText]=useState('');
+  const[busy,setBusy]=useState(false);
+
+  useEffect(()=>{
+    SB.from('comments').select('*, profiles(email)')
+      .eq('post_id',postId).order('created_at',{ascending:true})
+      .then(({data})=>setList(data||[]));
+  },[postId]);
+
+  const submit=async e=>{
+    e.preventDefault();
+    if(!text.trim()||!user)return;
+    setBusy(true);
+    try{
+      const{data,error}=await SB.from('comments')
+        .insert({post_id:postId,user_id:user.id,content:text.trim()})
+        .select('*, profiles(email)').single();
+      if(error)throw error;
+      setList(p=>[...p,data]);
+      setText('');
+    }catch(e){addToast(e.message||'Comment failed','err');}
+    setBusy(false);
+  };
+
+  return(
+    <div style={{borderTop:'1px solid var(--brd)',paddingTop:8,marginTop:8}}>
+      <div className="cmt-list" style={{maxHeight:120,overflowY:'auto'}}>
+        {list.map(c=>(
+          <div key={c.id} className="cmt">
+            <div className="cmt-meta"><i className="fas fa-user-circle"/>{c.profiles?.email?.split('@')[0]||'User'}</div>
+            <div className="cmt-txt">{c.content}</div>
+          </div>
+        ))}
+        {!list.length&&<p style={{fontSize:11,color:'var(--muted)',padding:'4px 0'}}>{t('noComments')}</p>}
+      </div>
+      {user?(
+        <form onSubmit={submit} style={{display:'flex',gap:6,marginTop:8}}>
+          <input className="inp" placeholder={t('addComment')} value={text}
+            onChange={e=>setText(e.target.value)}
+            style={{fontSize:12,padding:'8px 10px',minHeight:0}}/>
+          <button className="btn btn-p" disabled={busy||!text.trim()} style={{padding:'8px 12px',fontSize:12}}>
+            <i className="fas fa-paper-plane"/>
+          </button>
+        </form>
+      ):(
+        <p style={{fontSize:11,color:'var(--muted)',marginTop:6}}>{t('loginLike')}</p>
+      )}
+    </div>
+  );
+}
+
+/* ═══ DEAL CARD ═══ */
+function DealCard({post,user,isAdmin,onLoginRequired,onDelete,onEdit}){
+  const{t,dir,addToast}=useApp();
+  const[liked,setLiked]=useState(false);
+  const[likes,setLikes]=useState(post.like_count||0);
+  const[copied,setCopied]=useState(false);
+  const[lb,setLb]=useState(null);
+  const[showCmt,setShowCmt]=useState(false);
+  const imgs=parseImgs(post.images);
   const expired=!tLeft(post.created_at,post.discount_days);
-  const title=(lang==='ckb'?post.title_ckb:lang==='ar'?post.title_ar:post.title_en)||post.title_ckb||'';
+  const title=(dir==='rtl'?post.title_ckb:post.title_en)||post.title_ckb||'';
 
   useEffect(()=>{
     if(!user)return;
@@ -605,619 +840,583 @@ const DealCard=({post,onDelete,onEdit,onNeedLogin})=>{
   },[user?.id,post.id]);
 
   const handleLike=async()=>{
-    if(!user){onNeedLogin();return;}
-    if(liked){
-      await SB.from('likes').delete().eq('post_id',post.id).eq('user_id',user.id);
-      setLikeCount(c=>Math.max(0,c-1));setLiked(false);
-    }else{
-      const{error}=await SB.from('likes').insert({post_id:post.id,user_id:user.id});
-      if(!error){setLikeCount(c=>c+1);setLiked(true);}
-    }
+    if(!user){onLoginRequired();return;}
+    try{
+      if(liked){
+        await SB.from('likes').delete().eq('post_id',post.id).eq('user_id',user.id);
+        const nc=Math.max(0,likes-1);
+        await SB.from('posts').update({like_count:nc}).eq('id',post.id);
+        setLiked(false);setLikes(nc);
+      }else{
+        const{error}=await SB.from('likes').insert({post_id:post.id,user_id:user.id});
+        if(error)throw error;
+        const nc=likes+1;
+        await SB.from('posts').update({like_count:nc}).eq('id',post.id);
+        setLiked(true);setLikes(nc);
+      }
+    }catch(e){addToast('Like failed','err');}
   };
 
   const handleShare=async()=>{
-    if(navigator.share){try{await navigator.share({title,url:window.location.href});}catch(e){}}
-    else await navigator.clipboard?.writeText(window.location.href);
+    const url=`${window.location.origin}${window.location.pathname}?p=${post.id}`;
+    if(navigator.share){try{await navigator.share({title,url});}catch(e){}}
+    else if(navigator.clipboard){
+      await navigator.clipboard.writeText(url);
+      setCopied(true);setTimeout(()=>setCopied(false),2000);
+      addToast(t('copied'),'ok');
+    }
   };
 
+  const n=imgs.length;
+  const gc=n===1?'pi1':n===2?'pi2':n===3?'pi3':n===4?'pi4':'pi5';
+  const vis=Math.min(n,5);
+
   return(
-    <div ref={ref} className="card reveal">
-      <ImgGrid images={images} pct={post.discount_pct} expired={expired} onImg={i=>setLbIdx(i)}/>
-      {lbIdx!==null&&<Lightbox images={images} start={lbIdx} onClose={()=>setLbIdx(null)}/>}
-      <div style={{padding:'14px 15px 16px'}}>
-        <h3 style={{fontWeight:800,fontSize:15,lineHeight:1.4,marginBottom:11,color:'var(--white)'}}>{title||'Bilal Bazar Deal'}</h3>
+    <div className="card">
+      <div className="pimg">
+        {n===0?(
+          <div style={{height:200,background:'var(--brd)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:36}}>🏷️</div>
+        ):n===1?(
+          <div className={`fi pi1`} onClick={()=>setLb(0)}><img src={imgs[0]} alt="" loading="lazy"/></div>
+        ):(
+          <div className={gc}>
+            {imgs.slice(0,vis).map((img,i)=>(
+              <div key={i} className="fi" onClick={()=>setLb(i)}>
+                <img src={img} alt="" loading="lazy"/>
+                {n>5&&i===vis-1&&<div className="pmore">+{n-4}</div>}
+              </div>
+            ))}
+          </div>
+        )}
+        {post.discount_pct>0&&!expired&&(
+          <div className={`dbadge${dir==='ltr'?' ltr':''}`}>{post.discount_pct}%</div>
+        )}
+        {expired&&<div className="exp-ov"><span>{t('finished')}</span></div>}
+      </div>
+
+      {lb!==null&&<Lightbox images={imgs} start={lb} onClose={()=>setLb(null)}/>}
+
+      <div className="p4">
+        <h3 style={{fontWeight:700,fontSize:15,marginBottom:10,lineHeight:1.35}}>{title}</h3>
         <div style={{marginBottom:12}}><Countdown iso={post.created_at} days={post.discount_days}/></div>
-        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',paddingTop:10,borderTop:'1px solid var(--rim)'}}>
-          <div style={{display:'flex',gap:7}}>
-            <button onClick={handleLike} style={{display:'flex',alignItems:'center',gap:5,padding:'7px 12px',borderRadius:8,background:liked?'rgba(192,57,43,.18)':'var(--mid)',color:liked?'#ef9a9a':'var(--soft)',border:'none',fontSize:13,fontWeight:700,cursor:'pointer',transition:'all .15s'}}>
-              <i className={liked?'fas fa-heart':'far fa-heart'} style={{fontSize:12}}/>{likeCount}
+
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',
+          paddingTop:10,borderTop:'1px solid var(--brd)',gap:4,flexWrap:'wrap'}}>
+          <div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
+            <button onClick={handleLike} className="btn btn-g"
+              style={{padding:'6px 10px',fontSize:12,gap:4,
+                background:liked?'rgba(239,68,68,.12)':'',
+                color:liked?'var(--red)':'var(--muted)',
+                borderColor:liked?'rgba(239,68,68,.3)':''}}>
+              <i className={liked?'fas fa-heart':'far fa-heart'}/>{likes}
             </button>
-            <button onClick={handleShare} style={{display:'flex',alignItems:'center',gap:5,padding:'7px 12px',borderRadius:8,background:'var(--mid)',color:'var(--soft)',border:'none',fontSize:13,fontWeight:700,cursor:'pointer'}}>
-              <i className="fas fa-share-alt" style={{fontSize:12}}/>{t('share')}
+            <button onClick={handleShare} className="btn btn-g" style={{padding:'6px 10px',fontSize:12,gap:4}}>
+              <i className="fas fa-share-alt"/>{copied?t('copied'):t('share')}
+            </button>
+            <button onClick={()=>setShowCmt(s=>!s)} className="btn btn-g"
+              style={{padding:'6px 10px',fontSize:12,gap:4,
+                color:showCmt?'var(--acc)':'var(--muted)'}}>
+              <i className="fas fa-comment"/>{t('comments')}
             </button>
           </div>
           {isAdmin&&(
-            <div style={{display:'flex',gap:5}}>
-              <button onClick={()=>onEdit(post)} style={{width:32,height:32,borderRadius:7,background:'rgba(59,130,246,.12)',color:'#7ab4fa',border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',fontSize:12}}>
-                <i className="fas fa-pencil-alt"/>
-              </button>
-              <button onClick={()=>onDelete(post.id)} style={{width:32,height:32,borderRadius:7,background:'rgba(192,57,43,.12)',color:'#f08080',border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',fontSize:12}}>
-                <i className="fas fa-trash"/>
-              </button>
+            <div style={{display:'flex',gap:4}}>
+              <button onClick={()=>onEdit(post)} className="btn btn-g" style={{padding:'6px 8px',fontSize:12}}><i className="fas fa-pencil-alt"/></button>
+              <button onClick={()=>onDelete(post.id)} className="btn btn-d" style={{padding:'6px 8px',fontSize:12}}><i className="fas fa-trash"/></button>
             </div>
           )}
         </div>
+        {showCmt&&<Comments postId={post.id} user={user}/>}
       </div>
     </div>
   );
-};
+}
 
-/* ════════════════════════════════════════
-   POST MODAL
-════════════════════════════════════════ */
-const PostModal=({editingPost,onSave,onClose})=>{
-  const {t,lang}=useApp();
-  const [images,setImages]=useState(()=>editingPost?parseImgs(editingPost.images):[]);
-  const [form,setForm]=useState({
-    title_ckb:editingPost?.title_ckb||'',
-    title_ar:editingPost?.title_ar||'',
-    title_en:editingPost?.title_en||'',
-    discount_pct:editingPost?.discount_pct??0,
-    discount_days:editingPost?.discount_days||7,
-    category:editingPost?.category||'rice',
+/* ═══ POST MODAL ═══ */
+function PostModal({editing,onSave,onClose}){
+  const{t,addToast}=useApp();
+  const[imgs,setImgs]=useState(()=>editing?parseImgs(editing.images):[]);
+  const[form,setForm]=useState({
+    title:editing?.title_ckb||'',
+    pct:editing?.discount_pct??0,
+    days:editing?.discount_days||7,
+    cat:editing?.category||'rice'
   });
-  const [saving,setSaving]=useState(false);
+  const[busy,setBusy]=useState(false);
+  const[cropFile,setCropFile]=useState(null);
+  const[cropAsp,setCropAsp]=useState(1);
   const set=(k,v)=>setForm(f=>({...f,[k]:v}));
 
-  const addFiles=files=>Array.from(files).forEach(f=>{const r=new FileReader();r.onload=e=>setImages(p=>[...p,e.target.result]);r.readAsDataURL(f);});
-
-  const submit=async()=>{
-    if(!form.title_ckb.trim()||images.length===0)return;
-    setSaving(true);
-    const payload={...form,discount_pct:+form.discount_pct,discount_days:+form.discount_days,images:JSON.stringify(images)};
-    if(editingPost){
-      await SB.from('posts').update(payload).eq('id',editingPost.id);
-    }else{
-      await SB.from('posts').insert({...payload,created_at:new Date().toISOString(),like_count:0});
+  const onCropped=async blob=>{
+    setCropFile(null);
+    setBusy(true);
+    try{
+      const url=await storeUpload('posts-images',blob);
+      setImgs(p=>[...p,url]);
+      addToast('Image uploaded ✅','ok');
+    }catch(e){
+      addToast(e.message||'Upload failed. Check "posts-images" bucket in Supabase Storage.','err');
     }
-    setSaving(false);
-    onSave();
+    setBusy(false);
   };
 
-  const inputStyle={width:'100%',background:'var(--bg)',border:'1.5px solid var(--rim)',borderRadius:'var(--r)',padding:'11px 14px',color:'var(--text)',fontSize:14,fontFamily:'inherit',outline:'none',transition:'border-color .2s'};
+  const submit=async()=>{
+    if(!form.title.trim()||imgs.length===0)return;
+    setBusy(true);
+    try{
+      const payload={
+        title_ckb:form.title.trim(),title_ar:form.title.trim(),title_en:form.title.trim(),
+        discount_pct:+form.pct,discount_days:+form.days,
+        category:form.cat,images:JSON.stringify(imgs)
+      };
+      if(editing){
+        const{error}=await SB.from('posts').update(payload).eq('id',editing.id);
+        if(error)throw error;
+        addToast('Updated ✅','ok');
+      }else{
+        const{error}=await SB.from('posts').insert({
+          ...payload,created_at:new Date().toISOString(),like_count:0
+        });
+        if(error)throw error;
+        addToast('Published 🎉','ok');
+      }
+      onSave();
+    }catch(e){
+      addToast(e.message||'Save failed. Check Supabase tables.','err');
+    }
+    setBusy(false);
+  };
 
   return(
-    <div className="mbg" onClick={onClose}>
+    <div className="mover" onClick={onClose}>
       <div className="mbox" onClick={e=>e.stopPropagation()}>
         <div className="mhdr">
-          <h3>{editingPost?t('editPost'):t('addPost')}</h3>
-          <button onClick={onClose} style={{background:'none',border:'none',color:'var(--muted)',fontSize:26,cursor:'pointer',lineHeight:1,width:32,height:32,display:'flex',alignItems:'center',justifyContent:'center'}}>×</button>
+          <h3>{editing?t('editPost'):t('addPost')}</h3>
+          <button className="btn btn-g" style={{padding:'6px 10px'}} onClick={onClose}>×</button>
         </div>
-        <div style={{padding:18,display:'flex',flexDirection:'column',gap:14}}>
+        <div className="mbdy">
+          {/* Images */}
           <div>
-            <label style={{fontSize:11,color:'var(--gold2)',fontWeight:700,display:'block',marginBottom:7,textTransform:'uppercase',letterSpacing:.6}}>
-              وێنەکان *
+            <label style={{display:'block',fontSize:11,fontWeight:700,color:'var(--acc)',
+              marginBottom:8,textTransform:'uppercase',letterSpacing:.5}}>
+              وێنەکان * ({imgs.length}/5)
             </label>
-            <div style={{display:'flex',gap:6,overflowX:'auto',marginBottom:4,paddingBottom:4}} className="nsb">
-              {images.map((img,i)=>(
+            <div style={{display:'flex',gap:8,overflowX:'auto',paddingBottom:4}}>
+              {imgs.map((img,i)=>(
                 <div key={i} style={{position:'relative',flexShrink:0}}>
-                  <img src={img} alt="" style={{width:72,height:72,objectFit:'cover',borderRadius:10,border:'1px solid var(--rim)',display:'block'}}/>
-                  <button onClick={()=>setImages(p=>p.filter((_,j)=>j!==i))} style={{position:'absolute',top:2,right:2,background:'var(--red)',color:'#fff',width:20,height:20,borderRadius:'50%',border:'none',fontSize:11,cursor:'pointer',lineHeight:'20px',textAlign:'center',fontWeight:900}}>×</button>
+                  <img src={img} alt="" style={{width:68,height:68,objectFit:'cover',
+                    borderRadius:8,border:'1px solid var(--brd)',display:'block'}}/>
+                  <button onClick={()=>setImgs(p=>p.filter((_,j)=>j!==i))}
+                    style={{position:'absolute',top:-4,right:-4,background:'var(--red)',
+                      color:'#fff',width:20,height:20,borderRadius:'50%',border:'none',
+                      fontSize:11,cursor:'pointer',fontWeight:900,display:'flex',
+                      alignItems:'center',justifyContent:'center'}}>×</button>
                 </div>
               ))}
-              <label style={{width:72,height:72,background:'var(--mid)',borderRadius:10,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',cursor:'pointer',border:'1.5px dashed var(--rim2)',flexShrink:0,gap:4,transition:'border-color .2s'}}>
-                <i className="fas fa-camera" style={{color:'var(--gold2)',fontSize:20}}/>
-                <span style={{fontSize:9,color:'var(--soft)',fontWeight:600}}>وێنە زیادبکە</span>
-                <input type="file" accept="image/*" multiple style={{display:'none'}} onChange={e=>addFiles(e.target.files)}/>
-              </label>
+              {imgs.length<5&&(
+                <label style={{width:68,height:68,borderRadius:8,
+                  border:'1.5px dashed var(--brd)',background:'var(--bg)',
+                  display:'flex',flexDirection:'column',alignItems:'center',
+                  justifyContent:'center',cursor:'pointer',flexShrink:0,gap:4}}>
+                  <i className="fas fa-camera acc" style={{fontSize:18}}/>
+                  <span style={{fontSize:9,color:'var(--muted)',fontWeight:600}}>Add</span>
+                  <input type="file" accept="image/*" style={{display:'none'}}
+                    onChange={e=>{if(e.target.files[0])setCropFile(e.target.files[0]);}}/>
+                </label>
+              )}
             </div>
+            <div style={{display:'flex',gap:6,marginTop:6}}>
+              <button className={`btn ${cropAsp===1?'btn-p':'btn-g'}`} style={{padding:'6px 12px',fontSize:11}}
+                onClick={()=>setCropAsp(1)}>1:1</button>
+              <button className={`btn ${cropAsp===4/3?'btn-p':'btn-g'}`} style={{padding:'6px 12px',fontSize:11}}
+                onClick={()=>setCropAsp(4/3)}>4:3</button>
+            </div>
+            {cropFile&&<CropModal file={cropFile} aspect={cropAsp} onDone={onCropped} onClose={()=>setCropFile(null)}/>}
           </div>
-
+          {/* Title */}
           <div>
-            <label style={{fontSize:11,color:'var(--gold2)',fontWeight:700,display:'block',marginBottom:5,textTransform:'uppercase'}}>
-              🇮🇶 ناونیشانی داشکاندن *
-            </label>
-            <input style={inputStyle} dir="rtl" value={form.title_ckb} onChange={e=>set('title_ckb',e.target.value)} placeholder="بۆ نمونە: برنجی تازە 30% داشکاندن"/>
+            <label style={{display:'block',fontSize:11,fontWeight:700,color:'var(--acc)',
+              marginBottom:6,textTransform:'uppercase'}}>ناونیشان *</label>
+            <input className="inp" dir="rtl" value={form.title}
+              onChange={e=>set('title',e.target.value)}
+              placeholder="بۆ نمونە: برنجی تازە"/>
           </div>
-
+          {/* Discount + Days */}
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
             <div>
-              <label style={{fontSize:11,color:'var(--muted)',display:'block',marginBottom:5}}>
-                داشکاندن % <span style={{fontSize:9,color:'var(--gold2)'}}>( 0 = بێ داشکاندن )</span>
+              <label style={{display:'block',fontSize:11,color:'var(--muted)',marginBottom:6}}>
+                {t('pct')} <span style={{color:'var(--acc)',fontSize:10}}>(0 = بێ داشکاندن)</span>
               </label>
-              <input type="number" min="0" max="99" style={inputStyle} value={form.discount_pct} onChange={e=>set('discount_pct',e.target.value)}/>
+              <input className="inp" type="number" min="0" max="99" value={form.pct}
+                onChange={e=>set('pct',e.target.value)}/>
             </div>
             <div>
-              <label style={{fontSize:11,color:'var(--muted)',display:'block',marginBottom:5}}>چەند ڕۆژ؟</label>
-              <input type="number" min="1" max="365" style={inputStyle} value={form.discount_days} onChange={e=>set('discount_days',e.target.value)}/>
+              <label style={{display:'block',fontSize:11,color:'var(--muted)',marginBottom:6}}>{t('pdays')}</label>
+              <input className="inp" type="number" min="1" max="365" value={form.days}
+                onChange={e=>set('days',e.target.value)}/>
             </div>
           </div>
-
+          {/* Category */}
           <div>
-            <label style={{fontSize:11,color:'var(--muted)',display:'block',marginBottom:7}}>جۆر</label>
+            <label style={{display:'block',fontSize:11,color:'var(--muted)',marginBottom:8}}>جۆر</label>
             <div style={{display:'flex',flexWrap:'wrap',gap:6}}>
               {CATS.filter(c=>c!=='all').map(c=>(
-                <button key={c} onClick={()=>set('category',c)} style={{padding:'7px 14px',borderRadius:20,border:'none',fontSize:12,fontWeight:700,cursor:'pointer',fontFamily:'inherit',background:form.category===c?'var(--gold)':'var(--mid)',color:form.category===c?'#fff':'var(--soft)',transition:'all .15s'}}>
-                  {t('cats.'+c)}
+                <button key={c} onClick={()=>set('cat',c)}
+                  className={`btn ${form.cat===c?'btn-p':'btn-g'}`}
+                  style={{borderRadius:20,padding:'7px 14px',fontSize:12}}>
+                  {T.ckb.cats[c]}
                 </button>
               ))}
             </div>
           </div>
-
-          <button className="btn btn-gold" onClick={submit}
-            disabled={saving||!form.title_ckb.trim()||images.length===0}
-            style={{width:'100%',marginTop:4,fontSize:15,padding:'13px'}}>
-            {saving
-              ?<><i className="fas fa-spinner fa-spin"/>  {t('uploading')}</>
-              :<><i className="fas fa-check"/>{t('pub')}</>
-            }
+          <button className="btn btn-p w100" onClick={submit}
+            disabled={busy||!form.title.trim()||imgs.length===0}
+            style={{padding:14,fontSize:15}}>
+            {busy?<><i className="fas fa-spinner fa-spin"/> {t('uploading')}</>
+              :<><i className="fas fa-check"/> {t('pub')}</>}
           </button>
-          {(images.length===0||!form.title_ckb.trim())&&(
+          {(imgs.length===0||!form.title.trim())&&(
             <p style={{textAlign:'center',color:'var(--muted)',fontSize:11,marginTop:-8}}>
-              {images.length===0?'* وێنەیەک زیاد بکە':'* ناونیشان بنووسە'}
+              {imgs.length===0?t('noImg'):t('noTitle')}
             </p>
           )}
         </div>
       </div>
     </div>
   );
-};
+}
 
-/* ════════════════════════════════════════
-   SPONSOR MANAGER
-════════════════════════════════════════ */
-const SponsorMgr=({sponsors,onUpdate,onClose})=>{
-  const {t}=useApp();
-  const [list,setList]=useState(sponsors);
-  const [url,setUrl]=useState('');
-  const [up,setUp]=useState(false);
+/* ═══ SPONSOR MODAL ═══ */
+function SponsorModal({sponsors,onUpdate,onClose}){
+  const{t,addToast}=useApp();
+  const[list,setList]=useState(sponsors);
+  const[link,setLink]=useState('');
+  const[cropFile,setCropFile]=useState(null);
+  const[busy,setBusy]=useState(false);
 
-  const addSponsor=async(imageUrl)=>{
-    if(!imageUrl.trim())return;
-    setUp(true);
-    const{data}=await SB.from('sponsors').insert({image_url:imageUrl.trim(),visible:true,position:'top'}).select().single();
-    if(data)setList(p=>[...p,data]);
-    setUrl('');setUp(false);
+  const onCropped=async blob=>{
+    setCropFile(null);
+    setBusy(true);
+    try{
+      const url=await storeUpload('images',blob);
+      const{data,error}=await SB.from('sponsors')
+        .insert({image_url:url,visible:true,link_url:link||null,sort_order:list.length})
+        .select().single();
+      if(error)throw error;
+      setList(p=>[...p,data]);
+      setLink('');
+      addToast('Sponsor added ✅','ok');
+    }catch(e){
+      addToast(e.message||'Failed. Check "images" bucket in Supabase Storage.','err');
+    }
+    setBusy(false);
   };
-  const addUrl=()=>addSponsor(url);
-  const addFile=(files)=>{
-    const f=files?.[0];
-    if(!f)return;
-    const r=new FileReader();
-    r.onload=e=>addSponsor(e.target.result);
-    r.readAsDataURL(f);
-  };
+
   const toggle=async(id,cur)=>{
     await SB.from('sponsors').update({visible:!cur}).eq('id',id);
     setList(p=>p.map(s=>s.id===id?{...s,visible:!cur}:s));
   };
-  const setPos=async(id,pos)=>{
-    await SB.from('sponsors').update({position:pos}).eq('id',id);
-    setList(p=>p.map(s=>s.id===id?{...s,position:pos}:s));
-  };
   const remove=async id=>{
     await SB.from('sponsors').delete().eq('id',id);
     setList(p=>p.filter(s=>s.id!==id));
+    addToast('Removed','ok');
   };
 
   return(
-    <div className="mbg" onClick={onClose}>
+    <div className="mover" onClick={onClose}>
       <div className="mbox" onClick={e=>e.stopPropagation()}>
         <div className="mhdr">
           <h3>{t('mgSp')}</h3>
-          <button className="btn btn-gold" onClick={()=>{onUpdate(list);onClose();}} style={{padding:'6px 14px',fontSize:13}}>{t('save')}</button>
+          <button className="btn btn-p" style={{padding:'6px 14px',fontSize:12}}
+            onClick={()=>{onUpdate(list);onClose();}}>{t('save')}</button>
         </div>
-        <div style={{padding:16,display:'flex',flexDirection:'column',gap:10}}>
-          <p style={{fontSize:11,color:'var(--muted)',marginBottom:2}}>
-            Add sponsor banner images. Use a wide horizontal image (landscape). Choose position: Top Strip, Left Side, or Right Side.
+        <div className="mbdy">
+          <p style={{fontSize:12,color:'var(--muted)'}}>
+            Upload a wide banner (best: 1200×300px, 4:1 ratio). Fade in/out animation will play automatically.
           </p>
-          <div style={{display:'flex',gap:7,alignItems:'center'}}>
-            <input className="inp" style={{flex:1}} placeholder={t('iurl')} value={url} onChange={e=>setUrl(e.target.value)} onKeyDown={e=>e.key==='Enter'&&addUrl()}/>
-            <label style={{position:'relative',cursor:'pointer',flexShrink:0}}>
-              <span className="btn btn-dark" style={{padding:'10px 12px',fontSize:13,display:'inline-flex'}}><i className="fas fa-image"/></span>
-              <input type="file" accept="image/*" style={{display:'none'}} onChange={e=>{addFile(e.target.files);e.target.value='';}}/>
+          <div style={{display:'flex',gap:8,alignItems:'center'}}>
+            <input className="inp" style={{flex:1}} placeholder={t('spLink')}
+              value={link} onChange={e=>setLink(e.target.value)}/>
+            <label className="btn btn-p" style={{flexShrink:0,cursor:'pointer',gap:6}}>
+              {busy?<i className="fas fa-spinner fa-spin"/>:<><i className="fas fa-image"/> Upload</>}
+              <input type="file" accept="image/*" style={{display:'none'}}
+                onChange={e=>{if(e.target.files[0])setCropFile(e.target.files[0]);}}/>
             </label>
-            <button className="btn btn-gold" onClick={addUrl} disabled={up||!url.trim()} style={{padding:'10px 14px',flexShrink:0}}><i className="fas fa-plus"/></button>
           </div>
-          {list.map((s,i)=> (
-            <div key={s.id} style={{display:'flex',alignItems:'center',gap:9,padding:'8px 0',borderBottom:'1px solid var(--rim)'}}>
-              <img src={s.image_url} alt="" style={{width:80,height:40,objectFit:'contain',borderRadius:6,background:'var(--mid)',flexShrink:0,border:'1px solid var(--rim)'}}/>
-              <div style={{flex:1,fontSize:11,color:'var(--muted)',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{s.image_url.slice(0,60)}{s.image_url.length>60?'...':''}</div>
-              <select value={s.position||'top'} onChange={e=>setPos(s.id,e.target.value)} style={{background:'var(--bg)',color:'var(--text)',border:'1px solid var(--rim)',borderRadius:6,padding:'4px 6px',fontSize:11,flexShrink:0}}>
-                <option value="top">Top</option>
-                <option value="left">Left</option>
-                <option value="right">Right</option>
-              </select>
-              <button onClick={()=>toggle(s.id,s.visible)} style={{background:s.visible?'rgba(200,150,42,.15)':'var(--mid)',color:s.visible?'var(--gold2)':'var(--soft)',border:'none',borderRadius:7,padding:'5px 10px',fontSize:11,fontWeight:700,cursor:'pointer',flexShrink:0}}>
-                {s.visible?t('hide'):t('show')}
-              </button>
-              <button onClick={()=>remove(s.id)} style={{background:'rgba(192,57,43,.15)',color:'#f08080',border:'none',borderRadius:7,width:28,height:28,cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center'}}>×</button>
+          {cropFile&&<CropModal file={cropFile} aspect={4} onDone={onCropped} onClose={()=>setCropFile(null)}/>}
+          {list.map(s=>(
+            <div key={s.id} style={{display:'flex',alignItems:'center',gap:10,
+              paddingBottom:10,borderBottom:'1px solid var(--brd)'}}>
+              <img src={s.image_url} alt="" style={{width:110,height:36,objectFit:'cover',
+                borderRadius:6,border:'1px solid var(--brd)',flexShrink:0}}/>
+              <div style={{flex:1,fontSize:11,color:'var(--muted)',overflow:'hidden',
+                textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{s.link_url||'No link'}</div>
+              <button className="btn btn-g" style={{padding:'6px 10px',fontSize:11}}
+                onClick={()=>toggle(s.id,s.visible)}>{s.visible?'Hide':'Show'}</button>
+              <button className="btn btn-d" style={{padding:'6px 8px',fontSize:11}}
+                onClick={()=>remove(s.id)}>×</button>
             </div>
           ))}
-          {list.length===0&&<p style={{color:'var(--muted)',fontSize:13,textAlign:'center',padding:16}}>No sponsor banners yet.</p>}
+          {!list.length&&<p style={{textAlign:'center',color:'var(--muted)',fontSize:13,padding:'16px 0'}}>No sponsors yet.</p>}
         </div>
       </div>
     </div>
   );
-};
+}
 
-/* ════════════════════════════════════════
-   AUTH MODAL — White clean design
-════════════════════════════════════════ */
-const AuthModal=({mode,onClose,onDone})=>{
-  const {t}=useApp();
-  const [m,setM]=useState(mode||'login');
-  const [email,setEmail]=useState('');
-  const [pass,setPass]=useState('');
-  const [err,setErr]=useState('');
-  const [loading,setLoading]=useState(false);
-
-  const submit=async e=>{
-    e.preventDefault();
-    setLoading(true);setErr('');
-    try{
-      if(m==='login'){
-        const{error}=await SB.auth.signInWithPassword({email:email.trim(),password:pass});
-        if(error)throw error;
-      }else{
-        const{data,error}=await SB.auth.signUp({email:email.trim(),password:pass});
-        if(error)throw error;
-        if(data?.user&&!data?.session){
-          setErr('Check your email — we sent you a confirmation link.');
-          setLoading(false);return;
-        }
-      }
-      onDone?.();onClose();
-    }catch(e){
-      let msg=e.message||'Wrong email or password';
-      if(msg.includes('Invalid login'))msg='Wrong email or password';
-      if(msg.includes('already registered'))msg='This email already has an account. Please Log In.';
-      if(msg.includes('weak'))msg='Password must be at least 6 characters.';
-      setErr(msg);
-    }
-    setLoading(false);
-  };
-
-  const google=async()=>{
-    const{error}=await SB.auth.signInWithOAuth({
-      provider:'google',
-      options:{redirectTo: window.location.origin + window.location.pathname}
-    });
-    if(error)setErr('Google sign-in not enabled yet. Use email & password instead.');
-  };
-
-  return(
-    <div className="abg" onClick={onClose}>
-      <div className="acard" onClick={e=>e.stopPropagation()}>
-        <div className="atop">
-          <h2>{m==='login'?'Log In':'Sign Up'}</h2>
-          <p>
-            {m==='login'?"Don't have an account?":'Already a member?'}{' '}
-            <span onClick={()=>{setM(x=>x==='login'?'signup':'login');setErr('');}}>
-              {m==='login'?'Sign Up':'Log In'}
-            </span>
-          </p>
-        </div>
-        <div className="abody">
-          <form onSubmit={submit} autoComplete="off">
-            <input type="text" name="fake_user" style={{display:'none'}} autoComplete="username"/>
-            <div className="afield">
-              <label>Email</label>
-              <input className="ainp" type="email" placeholder="your@email.com"
-                value={email} onChange={e=>setEmail(e.target.value)}
-                autoComplete="off" required/>
-            </div>
-            <div className="afield">
-              <label>Password</label>
-              <input className="ainp" type="password" placeholder="••••••••"
-                value={pass} onChange={e=>setPass(e.target.value)}
-                autoComplete="new-password" required/>
-            </div>
-            {err&&(
-              <div style={{background:'#fef2f2',border:'1px solid #fecaca',borderRadius:8,padding:'8px 12px',marginTop:8}}>
-                <p style={{color:'#dc2626',fontSize:12,fontFamily:'Outfit'}}>{err}</p>
-              </div>
-            )}
-            <button type="submit" className="asubmit" disabled={loading}>
-              {loading?<><i className="fas fa-spinner fa-spin" style={{marginInlineEnd:6}}/>Please wait…</>:(m==='login'?'Log In':'Create Account')}
-            </button>
-          </form>
-          <div className="adiv">or continue with</div>
-          <button className="sbtn" onClick={google}>
-            <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-            Continue with Google
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-/* ════════════════════════════════════════
-   DRAWER
-════════════════════════════════════════ */
-const Drawer=({onClose,onAuth,setSpMgr,onAddPost})=>{
-  const {t,lang,sw,user,isAdmin}=useApp();
+/* ═══ DRAWER ═══ */
+function Drawer({onClose,onAuth,onAddPost,onSpMgr}){
+  const{t,lang,sw,user,isAdmin}=useApp();
   const go=id=>{document.getElementById(id)?.scrollIntoView({behavior:'smooth'});onClose();};
   const logout=async()=>{await SB.auth.signOut();onClose();};
-
   return(
-    <div className="dbg" onClick={onClose}>
-      <div className={`dpanel ${lang==='en'?'ltr':'rtl'}`} onClick={e=>e.stopPropagation()}>
-        <div style={{padding:'18px 18px 16px',borderBottom:'1px solid rgba(255,255,255,.05)',display:'flex',alignItems:'center',justifyContent:'space-between',flexShrink:0}}>
-          <span style={{fontWeight:900,fontSize:17,background:'linear-gradient(120deg,var(--gold),var(--gold2))',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>Bilal Bazar</span>
-          <button onClick={onClose} style={{background:'var(--mid)',border:'1px solid var(--rim)',borderRadius:8,width:30,height:30,color:'var(--muted)',cursor:'pointer',fontSize:16,display:'flex',alignItems:'center',justifyContent:'center'}}>×</button>
+    <div className="dov" onClick={onClose}>
+      <div className={`dpan ${lang==='en'?'ltr':'rtl'}`} onClick={e=>e.stopPropagation()}>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',
+          padding:'16px 20px',borderBottom:'1px solid var(--brd)'}}>
+          <span style={{fontWeight:900,fontSize:18,
+            background:'linear-gradient(90deg,var(--acc),#6ee7b7)',
+            WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>
+            Bilal Bazar
+          </span>
+          <button className="btn btn-g" style={{padding:'6px 10px'}} onClick={onClose}>×</button>
         </div>
-
-        <button className="di" onClick={()=>go('hero')}>
-          <div className="dico" style={{background:'rgba(200,150,42,.12)'}}><i className="fas fa-home" style={{color:'var(--gold2)'}}/></div>{t('home')}
-        </button>
-        <button className="di" onClick={()=>go('locs')}>
-          <div className="dico" style={{background:'rgba(13,148,136,.1)'}}><i className="fas fa-map-marker-alt" style={{color:'var(--teal2)'}}/></div>{t('locs')}
-        </button>
-        <button className="di" onClick={()=>go('about')}>
-          <div className="dico" style={{background:'rgba(96,165,250,.1)'}}><i className="fas fa-info-circle" style={{color:'#60a5fa'}}/></div>{t('about')}
-        </button>
-
-        <div style={{padding:'13px 16px',borderBottom:'1px solid rgba(255,255,255,.04)'}}>
-          <p style={{fontSize:10,color:'var(--muted)',fontWeight:700,marginBottom:8,textTransform:'uppercase',letterSpacing:.7}}>{t('lang')}</p>
-          <div style={{display:'flex',gap:6}}>
-            {[{c:'ckb',l:'کوردی'},{c:'ar',l:'عربی'},{c:'en',l:'EN'}].map(x=>(
-              <button key={x.c} onClick={()=>{sw(x.c);onClose();}} style={{flex:1,padding:'8px 4px',borderRadius:8,border:'none',fontWeight:700,fontSize:12,cursor:'pointer',fontFamily:'inherit',background:lang===x.c?'var(--gold)':'var(--mid)',color:lang===x.c?'#06091a':'var(--soft)',transition:'all .15s'}}>
-                {x.l}
-              </button>
+        {[{id:'hero',i:'fa-home',l:t('home')},{id:'deals',i:'fa-tags',l:t('dtitle')},
+          {id:'locs',i:'fa-map-marker-alt',l:t('locs')},{id:'about',i:'fa-info-circle',l:t('about')}
+        ].map(x=>(
+          <button key={x.id} className="di" onClick={()=>go(x.id)}>
+            <div className="dic"><i className={`fas ${x.i} acc`}/></div>{x.l}
+          </button>
+        ))}
+        <a href="https://wa.me/9647509193030" target="_blank" rel="noreferrer" className="di">
+          <div className="dic"><i className="fab fa-whatsapp" style={{color:'#25d366'}}/></div>WhatsApp
+        </a>
+        <div style={{padding:'12px 18px',borderBottom:'1px solid var(--brd)'}}>
+          <p style={{fontSize:10,fontWeight:700,color:'var(--muted)',
+            textTransform:'uppercase',letterSpacing:.2,marginBottom:8}}>{t('lang')}</p>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:6}}>
+            {[{c:'ckb',l:'کوردی'},{c:'ar',l:'عربي'},{c:'en',l:'EN'}].map(x=>(
+              <button key={x.c} onClick={()=>{sw(x.c);onClose();}}
+                className={`btn ${lang===x.c?'btn-p':'btn-g'}`}
+                style={{padding:'8px 4px',fontSize:12}}>{x.l}</button>
             ))}
           </div>
         </div>
-
         {user?(
           <>
             {isAdmin&&(
               <>
                 <button className="di" onClick={()=>{onAddPost();onClose();}}>
-                  <div className="dico" style={{background:'rgba(200,150,42,.12)'}}><i className="fas fa-plus" style={{color:'var(--gold2)'}}/></div>{t('addPost')}
+                  <div className="dic"><i className="fas fa-plus acc"/></div>{t('addPost')}
                 </button>
-                <button className="di" onClick={()=>{setSpMgr(true);onClose();}}>
-                  <div className="dico" style={{background:'rgba(167,139,250,.1)'}}><i className="fas fa-star" style={{color:'#a78bfa'}}/></div>{t('mgSp')}
+                <button className="di" onClick={()=>{onSpMgr();onClose();}}>
+                  <div className="dic"><i className="fas fa-images acc"/></div>{t('mgSp')}
                 </button>
               </>
             )}
-            <button className="di" onClick={logout} style={{color:'#f08080'}}>
-              <div className="dico" style={{background:'rgba(192,57,43,.1)'}}><i className="fas fa-sign-out-alt" style={{color:'#f08080'}}/></div>{t('logout')}
+            <button className="di" onClick={logout} style={{color:'var(--red)'}}>
+              <div className="dic"><i className="fas fa-sign-out-alt" style={{color:'var(--red)'}}/></div>{t('logout')}
             </button>
           </>
         ):(
-          <>
-            <button className="di" onClick={()=>{onAuth('login');onClose();}}>
-              <div className="dico" style={{background:'rgba(200,150,42,.12)'}}><i className="fas fa-user" style={{color:'var(--gold2)'}}/></div>{t('login')}
-            </button>
-            <button className="di" onClick={()=>{onAuth('signup');onClose();}}>
-              <div className="dico" style={{background:'rgba(13,148,136,.12)'}}><i className="fas fa-user-plus" style={{color:'var(--teal2)'}}/></div>{t('signup')}
-            </button>
-          </>
+          <button className="di" onClick={()=>{onAuth();onClose();}}>
+            <div className="dic"><i className="fas fa-user acc"/></div>{t('login')} / {t('signup')}
+          </button>
         )}
       </div>
     </div>
   );
-};
+}
 
-/* ════════════════════════════════════════
-   MAIN APP
-════════════════════════════════════════ */
-const App=()=>{
-  const {lang,t,dir,user,isAdmin}=useApp();
-  const [posts,setPosts]=useState([]);
-  const [sponsors,setSponsors]=useState([]);
-  const [cat,setCat]=useState('all');
-  const [shown,setShown]=useState(3);
-  const [loading,setLoading]=useState(true);
-  const [active,setActive]=useState('hero');
-  const [drawer,setDrawer]=useState(false);
-  const [authMode,setAuthMode]=useState(null);
-  const [postModal,setPostModal]=useState(false);
-  const [editing,setEditing]=useState(null);
-  const [spMgr,setSpMgr]=useState(false);
-  const [needLogin,setNeedLogin]=useState(false);
-  const videoRef=useRef(null);
+/* ═══ APP ═══ */
+function App(){
+  const{t,lang,dir,user,isAdmin,addToast}=useApp();
+  const[posts,setPosts]=useState([]);
+  const[sponsors,setSponsors]=useState([]);
+  const[cat,setCat]=useState('all');
+  const[shown,setShown]=useState(3);
+  const[loading,setLoading]=useState(true);
+  const[active,setActive]=useState('hero');
+  const[drawer,setDrawer]=useState(false);
+  const[authOpen,setAuthOpen]=useState(false);
+  const[postModal,setPostModal]=useState(false);
+  const[editing,setEditing]=useState(null);
+  const[spModal,setSpModal]=useState(false);
+  const vRef=useRef(null);
 
-  useEffect(()=>{loadPosts();loadSponsors();},[]);
+  const loadPosts=useCallback(async()=>{
+    setLoading(true);
+    try{
+      const{data,error}=await SB.from('posts').select('*').order('created_at',{ascending:false});
+      if(error)throw error;
+      setPosts(data||[]);
+    }catch(e){console.error('Posts:',e);}
+    setLoading(false);
+  },[]);
+
+  const loadSponsors=useCallback(async()=>{
+    try{
+      const{data}=await SB.from('sponsors').select('*').eq('visible',true).order('sort_order');
+      setSponsors(data||[]);
+    }catch(e){console.error('Sponsors:',e);}
+  },[]);
+
+  useEffect(()=>{loadPosts();loadSponsors();},[loadPosts,loadSponsors]);
   useEffect(()=>{setShown(3);},[cat]);
 
+  /* VIDEO: robust autoplay for GitHub Pages / mobile */
   useEffect(()=>{
-    const v=videoRef.current;
+    const v=vRef.current;
     if(!v)return;
-    const play=()=>{v.play().catch(()=>{});};
-    v.addEventListener('canplay',play,{once:true});
-    v.load();
-    return()=>v.removeEventListener('canplay',play);
+    v.muted=true;
+    const tryPlay=()=>{
+      const p=v.play();
+      if(p)p.catch(()=>{/* blocked by browser policy, bg color shows instead */});
+    };
+    if(v.readyState>=2)tryPlay();
+    else v.addEventListener('canplay',tryPlay,{once:true});
+    return()=>v.removeEventListener('canplay',tryPlay);
   },[]);
 
   useEffect(()=>{
     const ids=['hero','deals','locs','about'];
-    const obs=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);});
-    },{threshold:.2});
+    const obs=new IntersectionObserver(
+      entries=>entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);}),
+      {threshold:.2}
+    );
     ids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el);});
     return()=>obs.disconnect();
   },[]);
 
-  const loadPosts=async()=>{
-    setLoading(true);
-    const{data}=await SB.from('posts').select('*').order('created_at',{ascending:false});
-    setPosts(data||[]);
-    setLoading(false);
-  };
-
-  const loadSponsors=async()=>{
-    const{data}=await SB.from('sponsors').select('*').order('id');
-    setSponsors(data||[]);
-  };
-
-  const deletePost=async id=>{
+  const delPost=async id=>{
     if(!window.confirm(t('del')+'?'))return;
-    await SB.from('posts').delete().eq('id',id);
-    setPosts(p=>p.filter(x=>x.id!==id));
+    try{
+      await SB.from('posts').delete().eq('id',id);
+      setPosts(p=>p.filter(x=>x.id!==id));
+      addToast('Deleted','ok');
+    }catch(e){addToast('Delete failed','err');}
   };
 
   const handleSaved=()=>{setPostModal(false);setEditing(null);loadPosts();};
 
-  const filtered=useMemo(()=>
-    cat==='all'?posts:posts.filter(p=>p.category===cat),
-    [posts,cat]
-  );
-  const visiblePosts=filtered.slice(0,shown);
-  const visSponsor=sponsors.filter(s=>s.visible);
-
-  const topSponsors=visSponsor.filter(s=>s.position==='top'||!s.position);
-  const leftSponsors=visSponsor.filter(s=>s.position==='left');
-  const rightSponsors=visSponsor.filter(s=>s.position==='right');
-
+  const filtered=useMemo(()=>cat==='all'?posts:posts.filter(p=>p.category===cat),[posts,cat]);
+  const visible=filtered.slice(0,shown);
   const go=id=>document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
-
-  const navItems=[
-    {id:'hero',icon:'fa-home',l:t('home')},
-    {id:'deals',icon:'fa-tags',l:'Deals'},
-    {id:'locs',icon:'fa-map-marker-alt',l:t('locs')},
-    {id:'about',icon:'fa-info-circle',l:t('about')},
-  ];
-
-  const r1=useReveal(),r2=useReveal(),r3=useReveal();
+  const nav=[{id:'hero',i:'fa-home',l:t('home')},{id:'deals',i:'fa-tags',l:'Deals'},
+    {id:'locs',i:'fa-map-marker-alt',l:t('locs')},{id:'about',i:'fa-info-circle',l:t('about')}];
 
   return(
     <div className={dir==='rtl'?'rtl':'ltr'}>
 
-      {/* ══ TOP SPONSOR STRIP ══ */}
-      {topSponsors.length>0&&(
-        <div className="sp-strip">
-          {topSponsors.map((s,i)=>{
-            const duration=topSponsors.length*4;
-            const delay=i*4;
-            return(
-              <a key={s.id} href={s.link_url||'#'} target="_blank" rel="noreferrer" className="sp-link"
-                 style={{animationDuration:`${duration}s`,animationDelay:`${delay}s`}}>
-                <img src={s.image_url} alt="sponsor" className="sp-img"/>
-              </a>
-            );
-          })}
-        </div>
-      )}
+      <SponsorStrip sponsors={sponsors}/>
 
-      {/* ══ LEFT SIDE SPONSORS ══ */}
-      {leftSponsors.length>0&&(
-        <div className="sp-side sp-left">
-          {leftSponsors.map((s,i)=><a key={i} href={s.link_url||'#'} target="_blank" rel="noreferrer"><img src={s.image_url} alt="sponsor"/></a>)}
-        </div>
-      )}
-
-      {/* ══ RIGHT SIDE SPONSORS ══ */}
-      {rightSponsors.length>0&&(
-        <div className="sp-side sp-right">
-          {rightSponsors.map((s,i)=><a key={i} href={s.link_url||'#'} target="_blank" rel="noreferrer"><img src={s.image_url} alt="sponsor"/></a>)}
-        </div>
-      )}
-
-      {/* ══ HEADER ══ */}
+      {/* HEADER */}
       <header className="hdr">
-        <div style={{maxWidth:1100,margin:'0 auto',padding:'0 16px',height:52,display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-          <div style={{display:'flex',alignItems:'center',gap:9,cursor:'pointer'}} onClick={()=>go('hero')}>
-            <div style={{width:32,height:32,borderRadius:8,background:'linear-gradient(135deg,var(--gold),var(--gold2))',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:900,fontSize:16,color:'#06091a',flexShrink:0}}>B</div>
+        <div className="c flex aic jb" style={{height:52}}>
+          <div className="flex aic g2" style={{cursor:'pointer'}} onClick={()=>go('hero')}>
+            <div style={{width:32,height:32,borderRadius:8,flexShrink:0,
+              background:'linear-gradient(135deg,var(--acc),var(--acc2))',
+              display:'flex',alignItems:'center',justifyContent:'center',
+              fontWeight:900,fontSize:16,color:'#02140d'}}>B</div>
             <div>
-              <div style={{fontWeight:900,fontSize:15,color:'var(--white)',lineHeight:1}}>Bilal Bazar</div>
-              <div style={{fontSize:8,color:'var(--gold)',fontWeight:700,letterSpacing:1.8,marginTop:1}}>ERBIL</div>
+              <div style={{fontWeight:800,fontSize:14,lineHeight:1}}>Bilal Bazar</div>
+              <div style={{fontSize:8,color:'var(--acc)',fontWeight:700,letterSpacing:2,textTransform:'uppercase',marginTop:1}}>Erbil · Kurdistan</div>
             </div>
           </div>
-          <nav className="hd" style={{display:'flex',gap:2}}>
-            {navItems.map(x=>(
-              <button key={x.id} onClick={()=>go(x.id)} style={{background:'none',border:'none',color:active===x.id?'var(--gold2)':'var(--muted)',fontSize:13,fontWeight:600,padding:'6px 10px',borderRadius:7,cursor:'pointer',transition:'color .15s',fontFamily:'inherit'}}>
+          <nav className="flex g2 hm">
+            {nav.map(x=>(
+              <button key={x.id} onClick={()=>go(x.id)} className="btn btn-g"
+                style={{padding:'6px 10px',fontSize:13,borderColor:'transparent',
+                  color:active===x.id?'var(--acc)':'var(--muted)'}}>
                 {x.l}
               </button>
             ))}
           </nav>
-          <div style={{display:'flex',alignItems:'center',gap:8}}>
+          <div className="flex aic g2">
             {isAdmin&&(
-              <button onClick={()=>{setEditing(null);setPostModal(true);}} className="btn btn-gold hd" style={{padding:'7px 13px',fontSize:12}}>
-                <i className="fas fa-plus"/>{t('addPost')}
+              <button onClick={()=>{setEditing(null);setPostModal(true);}} className="btn btn-p hm" style={{padding:'7px 12px',fontSize:12}}>
+                <i className="fas fa-plus"/> {t('addPost')}
               </button>
             )}
-            {user&&<div title={user.email} style={{width:28,height:28,borderRadius:'50%',background:'var(--lift)',border:'2px solid var(--gold)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:12,fontWeight:700,color:'var(--gold2)',flexShrink:0}}>{user.email[0].toUpperCase()}</div>}
-            <button onClick={()=>setDrawer(true)} style={{background:'var(--mid)',border:'1px solid var(--rim)',borderRadius:8,width:36,height:36,display:'flex',alignItems:'center',justifyContent:'center',color:'var(--text)',cursor:'pointer',fontSize:14}}>
+            {user&&(
+              <div style={{width:28,height:28,borderRadius:'50%',background:'var(--elev)',
+                border:'2px solid var(--acc)',display:'flex',alignItems:'center',
+                justifyContent:'center',fontSize:12,fontWeight:700,color:'var(--acc)',flexShrink:0}}>
+                {user.email[0].toUpperCase()}
+              </div>
+            )}
+            <button onClick={()=>setDrawer(true)} className="btn btn-g" style={{padding:'8px 10px'}}>
               <i className="fas fa-bars"/>
             </button>
           </div>
         </div>
       </header>
 
-      {/* ══ HERO WITH VIDEO ══ */}
+      {/* HERO + VIDEO */}
       <section id="hero">
         <div className="vbg">
-          <video ref={videoRef} autoPlay muted loop playsInline preload="auto">
+          {/*
+            bg.mp4 must be in the SAME folder as index.html on GitHub.
+            Commit: git add bg.mp4 && git commit -m "add video" && git push
+          */}
+          <video ref={vRef} autoPlay muted loop playsInline preload="auto">
             <source src="bg.mp4" type="video/mp4"/>
           </video>
         </div>
-        <div className="orb" style={{width:500,height:500,background:'radial-gradient(circle,rgba(200,150,42,.1),transparent 70%)',top:'10%',insetInlineEnd:'-8%',animation:'glow 5s ease-in-out infinite'}}/>
-        <div className="orb" style={{width:350,height:350,background:'radial-gradient(circle,rgba(13,148,136,.08),transparent 70%)',bottom:'10%',insetInlineStart:'-4%',animation:'glow 6s ease-in-out 1s infinite'}}/>
 
-        <div style={{position:'relative',zIndex:2,textAlign:'center',padding:'100px 20px 80px',maxWidth:820,margin:'0 auto',width:'100%'}}>
-          <div style={{animation:'fadeUp .7s ease .1s both'}}>
-            <div className="hero-title">BILAL BAZAR</div>
+        {/* Ambient orbs */}
+        <div style={{position:'absolute',width:500,height:500,borderRadius:'50%',
+          background:'radial-gradient(circle,rgba(16,185,129,.08),transparent 70%)',
+          top:'8%',right:'-6%',filter:'blur(60px)',
+          animation:'glow 5s ease-in-out infinite',zIndex:1,pointerEvents:'none'}}/>
+        <div style={{position:'absolute',width:350,height:350,borderRadius:'50%',
+          background:'radial-gradient(circle,rgba(52,211,153,.06),transparent 70%)',
+          bottom:'8%',left:'-4%',filter:'blur(60px)',
+          animation:'glow 6s ease-in-out 1s infinite',zIndex:1,pointerEvents:'none'}}/>
+
+        <div className="hcont">
+          <h1 className="htitle">BILAL BAZAR</h1>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:14,
+            marginTop:8,animation:'fadeUp .7s ease .3s both'}}>
+            <div style={{width:40,height:1,background:'linear-gradient(90deg,transparent,var(--acc))'}}/>
+            <span style={{fontSize:10,fontWeight:700,letterSpacing:4,color:'var(--acc)',textTransform:'uppercase'}}>Erbil · Est. 2020</span>
+            <div style={{width:40,height:1,background:'linear-gradient(90deg,var(--acc),transparent)'}}/>
           </div>
-
-          <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:14,margin:'10px 0',animation:'fadeUp .7s ease .3s both'}}>
-            <div style={{width:50,height:1,background:'linear-gradient(90deg,transparent,var(--gold2))'}}/>
-            <span style={{fontSize:10,fontWeight:700,letterSpacing:4,color:'var(--gold)',textTransform:'uppercase'}}>BILAL BAZAR</span>
-            <div style={{width:50,height:1,background:'linear-gradient(90deg,var(--gold2),transparent)'}}/>
-          </div>
-
-          <div className="hero-sub" style={{marginBottom:8}}>
-            {lang==='ckb'?'بیلال بازار':lang==='ar'?'بيلال بازار':'Bilal Bazar'}
-          </div>
-
-          <p className="hero-desc" style={{marginBottom:34,maxWidth:520,margin:'0 auto 34px',animation:'fadeUp .7s ease .68s both'}}>
-            {t('sub')}
-          </p>
-
-          <div style={{display:'flex',flexWrap:'wrap',gap:12,justifyContent:'center',animation:'fadeUp .7s ease .88s both'}}>
-            <button onClick={()=>go('deals')} className="btn btn-gold" style={{padding:'14px 30px',borderRadius:30,fontSize:15}}
-              onMouseOver={e=>e.currentTarget.style.transform='translateY(-2px) scale(1.02)'}
-              onMouseOut={e=>e.currentTarget.style.transform=''}
-            >
+          <div className="hsub">{lang==='ckb'?'بیلال بازار':lang==='ar'?'بيلال بازار':'Bilal Bazar'}</div>
+          <p className="hdesc">{t('sub')}</p>
+          <div className="hcta">
+            <button onClick={()=>go('deals')} className="btn btn-p" style={{padding:'14px 28px',borderRadius:30,fontSize:15}}>
               <i className="fas fa-fire" style={{color:'rgba(100,10,0,.7)'}}/>{t('deals')}
             </button>
-            <button onClick={()=>go('locs')} style={{background:'rgba(255,255,255,.08)',color:'#fff',border:'1.5px solid rgba(255,255,255,.2)',borderRadius:30,padding:'14px 30px',fontSize:15,fontWeight:700,cursor:'pointer',fontFamily:'inherit',transition:'all .17s'}}
-              onMouseOver={e=>e.currentTarget.style.background='rgba(255,255,255,.15)'}
-              onMouseOut={e=>e.currentTarget.style.background='rgba(255,255,255,.08)'}
-            >
-              <i className="fas fa-map-marker-alt" style={{marginInlineEnd:8}}/>{t('stores')}
+            <button onClick={()=>go('locs')} className="btn btn-g"
+              style={{padding:'14px 28px',borderRadius:30,fontSize:15,color:'#fff',borderColor:'rgba(255,255,255,.2)'}}>
+              <i className="fas fa-map-marker-alt"/>{t('stores')}
             </button>
           </div>
-
-          <div style={{display:'flex',gap:36,justifyContent:'center',marginTop:58,animation:'fadeUp .7s ease 1.05s both',flexWrap:'wrap'}}>
-            {[{n:'4',l:t('br')},{n:'10K+',l:t('pr')},{n:t('wk'),l:t('dc')}].map(({n,l})=>(
-              <div key={n} style={{textAlign:'center'}}>
-                <div style={{fontWeight:900,fontSize:26,color:'#fff',lineHeight:1}}>{n}</div>
-                <div style={{fontSize:10,color:'var(--gold)',letterSpacing:.8,fontWeight:600,marginTop:3}}>{l}</div>
+          <div className="hstats">
+            {[{n:'4',l:t('br')},{n:'10K+',l:t('pr')},{n:t('wk'),l:t('dc')}].map(s=>(
+              <div key={s.n} style={{textAlign:'center'}}>
+                <div style={{fontWeight:900,fontSize:26,color:'#fff',lineHeight:1}}>{s.n}</div>
+                <div style={{fontSize:9,color:'var(--acc)',fontWeight:700,letterSpacing:1.5,textTransform:'uppercase',marginTop:4}}>{s.l}</div>
               </div>
             ))}
           </div>
         </div>
-
-        <div style={{position:'absolute',bottom:20,left:'50%',transform:'translateX(-50%)',zIndex:2,display:'flex',flexDirection:'column',alignItems:'center',gap:5,color:'rgba(255,255,255,.28)',animation:'fadeIn 1s ease 2s both'}}>
-          <span style={{fontSize:8,letterSpacing:2.5,textTransform:'uppercase',fontWeight:600}}>scroll</span>
-          <i className="fas fa-chevron-down" style={{fontSize:11,animation:'float 2s ease-in-out infinite'}}/>
+        <div className="scroll-h">
+          <span style={{fontSize:9,letterSpacing:2.5,textTransform:'uppercase',fontWeight:600}}>scroll</span>
+          <i className="fas fa-chevron-down" style={{fontSize:11,animation:'float 2.5s ease-in-out infinite'}}/>
         </div>
       </section>
 
-      {/* ══ DEALS ══ */}
-      <section id="deals" style={{padding:'52px 16px',maxWidth:1100,margin:'0 auto'}}>
-        <div ref={r1} className="reveal">
-          <div className="stitle" style={{marginBottom:20}}>
-            <h2 style={{fontWeight:900,fontSize:24,color:'var(--white)'}}>{t('dtitle')}</h2>
-            <span className="gpill">{filtered.length}</span>
-          </div>
-
-          <div style={{display:'flex',gap:7,overflowX:'auto',paddingBottom:14,marginBottom:22}} className="nsb">
+      {/* DEALS */}
+      <section id="deals" style={{padding:'44px 0'}}>
+        <div className="c">
+          <div className="stitle"><h2>{t('dtitle')}</h2><span className="badge">{filtered.length}</span></div>
+          <div style={{display:'flex',gap:8,overflowX:'auto',paddingBottom:14,marginBottom:20,scrollbarWidth:'none'}}>
             {CATS.map(c=>(
-              <button key={c} onClick={()=>setCat(c)} style={{padding:'8px 18px',borderRadius:22,border:cat!==c?'1px solid var(--rim)':'none',fontSize:13,fontWeight:700,cursor:'pointer',whiteSpace:'nowrap',fontFamily:'inherit',background:cat===c?'linear-gradient(135deg,var(--gold),var(--gold2))':'var(--mid)',color:cat===c?'#06091a':'var(--soft)',transition:'all .16s',boxShadow:cat===c?'0 4px 14px rgba(200,150,42,.3)':'none'}}>
+              <button key={c} onClick={()=>setCat(c)}
+                className={`btn ${cat===c?'btn-p':'btn-g'}`}
+                style={{borderRadius:22,padding:'8px 18px',fontSize:13,whiteSpace:'nowrap'}}>
                 {t('cats.'+c)}
               </button>
             ))}
@@ -1227,10 +1426,10 @@ const App=()=>{
             <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))',gap:16}}>
               {[1,2,3].map(i=>(
                 <div key={i} className="card">
-                  <div className="sk" style={{height:210}}/>
+                  <div className="sk" style={{height:200}}/>
                   <div style={{padding:14,display:'flex',flexDirection:'column',gap:8}}>
-                    <div className="sk" style={{height:15,width:'78%'}}/>
-                    <div className="sk" style={{height:12,width:'54%'}}/>
+                    <div className="sk" style={{height:14,width:'70%'}}/>
+                    <div className="sk" style={{height:12,width:'50%'}}/>
                   </div>
                 </div>
               ))}
@@ -1243,22 +1442,27 @@ const App=()=>{
           ):(
             <>
               <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))',gap:16}}>
-                {visiblePosts.map(post=>(
-                  <DealCard key={post.id} post={post} onDelete={deletePost} onEdit={p=>{setEditing(p);setPostModal(true);}} onNeedLogin={()=>setNeedLogin(true)}/>
+                {visible.map(post=>(
+                  <DealCard key={post.id} post={post} user={user} isAdmin={isAdmin}
+                    onLoginRequired={()=>setAuthOpen(true)}
+                    onDelete={delPost}
+                    onEdit={p=>{setEditing(p);setPostModal(true);}}/>
                 ))}
               </div>
+              {/* See More — only when more than 3 posts exist */}
               {filtered.length>3&&shown<=3&&(
                 <div style={{textAlign:'center',marginTop:24}}>
-                  <button className="btn btn-gold" onClick={()=>setShown(filtered.length)} style={{padding:'12px 32px',borderRadius:30,fontSize:14}}>
-                    <i className="fas fa-chevron-down" style={{marginInlineEnd:7}}/>{t('more')} ({filtered.length-3})
+                  <button className="btn btn-p" style={{borderRadius:30,padding:'12px 28px',fontSize:14}}
+                    onClick={()=>setShown(filtered.length)}>
+                    <i className="fas fa-chevron-down"/> {t('more')} ({filtered.length-3})
                   </button>
                 </div>
               )}
               {shown>3&&filtered.length>3&&(
                 <div style={{textAlign:'center',marginTop:24}}>
-                  <button className="btn btn-ghost" onClick={()=>setShown(3)} style={{padding:'12px 32px',borderRadius:30,fontSize:14}}>
-                    <i className="fas fa-chevron-up" style={{marginInlineEnd:7}}/>
-                    {t('hide')}
+                  <button className="btn btn-g" style={{borderRadius:30,padding:'12px 28px',fontSize:14}}
+                    onClick={()=>setShown(3)}>
+                    <i className="fas fa-chevron-up"/> {t('lessBtn')}
                   </button>
                 </div>
               )}
@@ -1267,31 +1471,41 @@ const App=()=>{
         </div>
       </section>
 
-      <div style={{height:1,background:'linear-gradient(90deg,transparent,var(--rim),transparent)'}}/>
+      <div className="div"/>
 
-      {/* ══ LOCATIONS ══ */}
-      <section id="locs" style={{padding:'52px 16px',background:'var(--dark)',borderTop:'1px solid var(--rim)'}}>
-        <div ref={r2} className="reveal" style={{maxWidth:1100,margin:'0 auto'}}>
-          <div className="stitle" style={{marginBottom:26,justifyContent:'center'}}>
-            <h2 style={{fontWeight:900,fontSize:24,color:'var(--white)'}}>{t('ltitle')}</h2>
-          </div>
+      {/* LOCATIONS */}
+      <section id="locs" style={{padding:'44px 0',background:'var(--surf)',borderTop:'1px solid var(--brd)'}}>
+        <div className="c">
+          <div className="stitle" style={{justifyContent:'center'}}><h2>{t('ltitle')}</h2></div>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(240px,1fr))',gap:14}}>
             {LOCS.map(loc=>(
-              <a key={loc.id} href={loc.link} target="_blank" rel="noopener noreferrer" className="loccard">
-                <div style={{width:40,height:40,borderRadius:10,background:'rgba(5,150,105,.12)',border:'1px solid rgba(5,150,105,.25)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:14,fontSize:17}}>
-                  <i className="fas fa-store" style={{color:'var(--gold2)'}}/>
+              <a key={loc.id} href={loc.link} target="_blank" rel="noopener noreferrer" className="lcard">
+                <div style={{width:40,height:40,borderRadius:10,
+                  background:'rgba(16,185,129,.1)',border:'1px solid rgba(16,185,129,.2)',
+                  display:'flex',alignItems:'center',justifyContent:'center',marginBottom:14}}>
+                  <i className="fas fa-store acc"/>
                 </div>
-                <h3 style={{fontWeight:800,fontSize:14,marginBottom:5,color:'var(--white)',lineHeight:1.35}}>{loc[lang]||loc.en}</h3>
-                <p style={{fontSize:12,color:'var(--muted)',marginBottom:13,lineHeight:1.4}}>{loc.addr[lang]||loc.addr.en}</p>
-                <div style={{display:'flex',flexDirection:'column',gap:6,marginBottom:14,fontSize:11,color:'var(--soft)',direction:'ltr',textAlign:'start'}}>
-                  <span style={{direction:'ltr',display:'flex',alignItems:'center',gap:6}}><i className="far fa-clock" style={{color:'var(--gold)',width:14}}/>{loc.hr}</span>
-                  <span style={{direction:'ltr',display:'flex',alignItems:'center',gap:6}}><i className="fas fa-phone" style={{color:'var(--gold)',width:14}}/>{loc.ph}</span>
+                <h3 style={{fontWeight:800,fontSize:14,marginBottom:5,lineHeight:1.35}}>
+                  {loc[lang]||loc.en}
+                </h3>
+                <p style={{fontSize:12,color:'var(--muted)',marginBottom:13,lineHeight:1.4}}>
+                  {loc.addr[lang]||loc.addr.en}
+                </p>
+                <div style={{display:'flex',flexDirection:'column',gap:5,marginBottom:13,
+                  fontSize:11,color:'var(--muted)',direction:'ltr',textAlign:'start'}}>
+                  <span style={{display:'flex',alignItems:'center',gap:6}}>
+                    <i className="far fa-clock acc" style={{width:14}}/>{loc.hr}
+                  </span>
+                  <span style={{display:'flex',alignItems:'center',gap:6}}>
+                    <i className="fas fa-phone acc" style={{width:14}}/>{loc.ph}
+                  </span>
                 </div>
                 <div style={{display:'flex',gap:8}}>
-                  <span style={{flex:1,background:'linear-gradient(135deg,var(--gold),var(--gold2))',color:'#fff',borderRadius:8,padding:'9px 8px',textAlign:'center',fontSize:12,fontWeight:800,display:'flex',alignItems:'center',justifyContent:'center',gap:5}}>
+                  <span className="btn btn-p f1" style={{padding:'8px',fontSize:12,gap:5}}>
                     <i className="fas fa-map-marker-alt"/>{t('openMap')}
                   </span>
-                  <a href={`tel:+964${loc.ph.replace(/^0/,'').replace(/\s/g,'')}`} onClick={e=>e.stopPropagation()} style={{background:'var(--mid)',border:'1px solid var(--rim)',borderRadius:8,padding:'9px 13px',display:'flex',alignItems:'center',color:'var(--soft)',fontSize:14}}>
+                  <a href={`tel:+964${loc.ph.replace(/^0/,'').replace(/\s/g,'')}`}
+                    onClick={e=>e.stopPropagation()} className="btn btn-g" style={{padding:'8px 12px'}}>
                     <i className="fas fa-phone"/>
                   </a>
                 </div>
@@ -1301,96 +1515,80 @@ const App=()=>{
         </div>
       </section>
 
-      <div style={{height:1,background:'linear-gradient(90deg,transparent,var(--rim),transparent)'}}/>
+      <div className="div"/>
 
-      {/* ══ ABOUT ══ */}
-      <section id="about" style={{padding:'52px 16px',maxWidth:720,margin:'0 auto',textAlign:'center'}}>
-        <div ref={r3} className="reveal">
-          <div className="stitle" style={{justifyContent:'center',marginBottom:16}}>
-            <h2 style={{fontWeight:900,fontSize:24,color:'var(--white)'}}>{t('atitle')}</h2>
-          </div>
-          <p style={{color:'var(--soft)',fontSize:15,lineHeight:1.9,fontWeight:400,maxWidth:600,margin:'0 auto'}}>{t('atext')}</p>
-
-          <div className="abt-feat">
-            {[{i:'fa-leaf',l:t('feat1')},{i:'fa-tag',l:t('feat2')},{i:'fa-award',l:t('feat3')}].map((f,idx)=>(
-              <div key={idx} className="abt-feat-item">
-                <div className="abt-feat-ico"><i className={`fas ${f.i}`}/></div>
-                <div style={{fontSize:12,fontWeight:700,color:'var(--white)'}}>{f.l}</div>
-              </div>
-            ))}
-          </div>
+      {/* ABOUT */}
+      <section id="about" style={{padding:'44px 16px',maxWidth:700,margin:'0 auto',textAlign:'center'}}>
+        <div className="stitle" style={{justifyContent:'center'}}><h2>{t('atitle')}</h2></div>
+        <p style={{color:'var(--muted)',fontSize:15,lineHeight:1.85}}>{t('atext')}</p>
+        <div className="af">
+          {[{i:'fa-leaf',l:t('feat1')},{i:'fa-tag',l:t('feat2')},{i:'fa-award',l:t('feat3')}].map((f,i)=>(
+            <div key={i} className="ai">
+              <div className="aico"><i className={`fas ${f.i}`}/></div>
+              <div style={{fontSize:12,fontWeight:700}}>{f.l}</div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ══ FOOTER ══ */}
-      <footer style={{background:'var(--bg)',borderTop:'1px solid var(--rim)',padding:'34px 16px 70px',textAlign:'center'}}>
-        <div style={{fontWeight:900,fontSize:26,marginBottom:4,background:'linear-gradient(120deg,#fff,var(--gold2))',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>Bilal Bazar</div>
-        <div style={{fontSize:8,fontWeight:700,letterSpacing:2.8,color:'var(--gold)',marginBottom:8}}>ERBIL</div>
-        <div style={{fontFamily:'Noto Sans Arabic',fontSize:14,color:'var(--muted)',marginBottom:20}}>
+      {/* FOOTER */}
+      <footer style={{textAlign:'center',padding:'32px 16px 72px',
+        background:'var(--bg)',borderTop:'1px solid var(--brd)'}}>
+        <div style={{fontWeight:900,fontSize:26,marginBottom:4,
+          background:'linear-gradient(90deg,#fff,var(--acc))',
+          WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>
+          Bilal Bazar
+        </div>
+        <div style={{fontSize:8,fontWeight:700,color:'var(--acc)',letterSpacing:3,
+          textTransform:'uppercase',marginBottom:8}}>Erbil · Kurdistan</div>
+        <div style={{fontSize:14,color:'var(--muted)',marginBottom:18,fontFamily:'Noto Sans Arabic'}}>
           {lang==='ckb'?'بیلال بازار':lang==='ar'?'بيلال بازار':'Bilal Bazar'}
         </div>
-        <a href="https://wa.me/9647509193030" target="_blank" rel="noreferrer" style={{display:'inline-flex',alignItems:'center',gap:8,background:'rgba(37,211,102,.09)',border:'1px solid rgba(37,211,102,.2)',borderRadius:10,padding:'10px 20px',color:'#25d366',textDecoration:'none',fontSize:14,fontWeight:700,fontFamily:'Outfit,sans-serif',marginBottom:20}}>
-          <i className="fab fa-whatsapp" style={{fontSize:17}}/>WhatsApp
+        <a href="https://wa.me/9647509193030" target="_blank" rel="noreferrer"
+          style={{display:'inline-flex',alignItems:'center',gap:8,
+            background:'rgba(37,211,102,.09)',border:'1px solid rgba(37,211,102,.2)',
+            borderRadius:10,padding:'10px 20px',color:'#25d366',
+            textDecoration:'none',fontSize:14,fontWeight:700,marginBottom:18}}>
+          <i className="fab fa-whatsapp" style={{fontSize:17}}/> WhatsApp
         </a>
-        <p style={{fontSize:10,color:'var(--rim)'}}>{t('copy')}</p>
+        <p style={{fontSize:11,color:'var(--muted)'}}>{t('copy')}</p>
       </footer>
 
-      {/* ══ MOBILE BOTTOM NAV ══ */}
-      <div className="mnav">
-        {navItems.map(x=>(
-          <button key={x.id} className={`mnb${active===x.id?' act':''}`} onClick={()=>go(x.id)}>
-            <i className={`fas ${x.icon}`} style={{fontSize:18}}/>
-            {x.l}
+      {/* MOBILE BOTTOM NAV */}
+      <div className="mnav hd">
+        {nav.map(x=>(
+          <button key={x.id} className={`mnb ${active===x.id?'act':''}`} onClick={()=>go(x.id)}>
+            <i className={`fas ${x.i}`} style={{fontSize:19}}/>{x.l}
           </button>
         ))}
         <button className="mnb" onClick={()=>setDrawer(true)}>
-          <i className="fas fa-bars" style={{fontSize:18}}/>{t('menu')}
+          <i className="fas fa-bars" style={{fontSize:19}}/>{t('menu')}
         </button>
       </div>
 
-      {/* ══ FLOATING WHATSAPP ══ */}
-      <a href="https://wa.me/9647509193030" target="_blank" rel="noreferrer"
-        style={{position:'fixed',bottom:66,right:16,width:50,height:50,borderRadius:'50%',background:'#25d366',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontSize:22,zIndex:45,boxShadow:'0 4px 20px rgba(37,211,102,.45)',textDecoration:'none',transition:'transform .18s'}}
-        onMouseOver={e=>e.currentTarget.style.transform='scale(1.1)'}
-        onMouseOut={e=>e.currentTarget.style.transform='scale(1)'}
-      ><i className="fab fa-whatsapp"/></a>
-
+      {/* FABs */}
+      <a href="https://wa.me/9647509193030" target="_blank" rel="noreferrer" className="fab-wa">
+        <i className="fab fa-whatsapp"/>
+      </a>
       {isAdmin&&(
-        <button onClick={()=>{setEditing(null);setPostModal(true);}}
-          style={{position:'fixed',bottom:66,left:16,width:50,height:50,borderRadius:'50%',background:'linear-gradient(135deg,var(--gold),var(--gold2))',border:'none',display:'flex',alignItems:'center',justifyContent:'center',color:'#06091a',fontSize:22,zIndex:45,cursor:'pointer',boxShadow:'0 4px 20px rgba(200,150,42,.5)',transition:'transform .18s'}}
-          onMouseOver={e=>e.currentTarget.style.transform='scale(1.1) rotate(90deg)'}
-          onMouseOut={e=>e.currentTarget.style.transform='scale(1) rotate(0deg)'}
-        ><i className="fas fa-plus"/></button>
+        <button className="fab-add" onClick={()=>{setEditing(null);setPostModal(true);}}>
+          <i className="fas fa-plus"/>
+        </button>
       )}
 
-      {/* ══ MODALS ══ */}
-      {drawer&&<Drawer onClose={()=>setDrawer(false)} onAuth={m=>setAuthMode(m)} setSpMgr={setSpMgr} onAddPost={()=>{setEditing(null);setPostModal(true);}}/>}
-
-      {authMode&&<AuthModal mode={authMode} onClose={()=>setAuthMode(null)} onDone={()=>setAuthMode(null)}/>}
-
-      {needLogin&&(
-        <div className="mbg" onClick={()=>setNeedLogin(false)}>
-          <div className="mbox" onClick={e=>e.stopPropagation()} style={{maxWidth:340}}>
-            <div style={{padding:28,textAlign:'center'}}>
-              <div style={{fontSize:44,marginBottom:12}}>❤️</div>
-              <h3 style={{fontWeight:800,fontSize:17,marginBottom:8,color:'var(--white)'}}>{t('loginLike')}</h3>
-              <div style={{display:'flex',gap:8,marginTop:16}}>
-                <button className="btn btn-gold" style={{flex:1}} onClick={()=>{setNeedLogin(false);setAuthMode('login');}}>{t('login')}</button>
-                <button className="btn btn-ghost" style={{flex:1}} onClick={()=>{setNeedLogin(false);setAuthMode('signup');}}>{t('signup')}</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {postModal&&<PostModal editingPost={editing} onSave={handleSaved} onClose={()=>{setPostModal(false);setEditing(null);}}/>}
-
-      {spMgr&&<SponsorMgr sponsors={sponsors} onUpdate={s=>setSponsors(s)} onClose={()=>setSpMgr(false)}/>}
+      {/* MODALS */}
+      {drawer&&<Drawer onClose={()=>setDrawer(false)} onAuth={()=>setAuthOpen(true)}
+        onAddPost={()=>{setEditing(null);setPostModal(true);}} onSpMgr={()=>setSpModal(true)}/>}
+      {authOpen&&<AuthModal onClose={()=>setAuthOpen(false)}/>}
+      {postModal&&<PostModal editing={editing} onSave={handleSaved}
+        onClose={()=>{setPostModal(false);setEditing(null);}}/>}
+      {spModal&&<SponsorModal sponsors={sponsors} onUpdate={setSponsors}
+        onClose={()=>setSpModal(false)}/>}
     </div>
   );
-};
+}
 
-const Root=()=><Provider><App/></Provider>;
+const Root=()=><AppProv><App/></AppProv>;
 ReactDOM.createRoot(document.getElementById('root')).render(<Root/>);
 </script>
 </body>
